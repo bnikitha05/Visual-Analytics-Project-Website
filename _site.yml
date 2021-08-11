@@ -1,0 +1,12 @@
+name: "Visual Analytics Project Website"
+title: "VizAnalyticsProject Website"
+description: |
+  VizAnalyticsProject Website
+output_dir: "docs"
+navbar:
+  right:
+    - text: "Home"
+      href: index.html
+    - text: "About"
+      href: about.html
+output: distill::distill_article
