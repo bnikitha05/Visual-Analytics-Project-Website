@@ -1,12 +1,22 @@
 name: "Visual Analytics Project Website"
-title: "VizAnalyticsProject Website"
+title: "Group 15"
 description: |
-  VizAnalyticsProject Website
-output_dir: "docs"
+  Project Website
+output_dir: "_site"
 navbar:
-  right:
-    - text: "Home"
-      href: index.html
+  left:
     - text: "About"
       href: about.html
+    - text: "Application"
+      href: application.html
+    - text: "Application User Guide"
+      href: userGuide.html
+    - text: "Research Paper"
+      href: researchPaper.html
+    - text: "Poster"
+      href: poster.html
+      
+  right:
+   # - text: "Home"
+   #   href: index.html
 output: distill::distill_article
