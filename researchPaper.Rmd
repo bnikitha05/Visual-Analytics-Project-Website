@@ -1,0 +1,13 @@
+---
+title: "Research Paper"
+output:
+  distill::distill_article:
+    toc: true
+    toc_depth: 3
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning=FALSE,message=FALSE)
+```
+
+#### research paper in the required format

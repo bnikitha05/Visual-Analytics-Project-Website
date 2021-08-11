@@ -1,18 +1,30 @@
 ---
-title: "VizAnalyticsProject Website"
+title: "Visual Detectives #suggest other names"
 description: |
-  Welcome to the website. I hope you enjoy it!
+  Does visual analytics help in investigations? Read on to find out! :D #suggest description
 site: distill::distill_website
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-
-# Learn more about creating websites with Distill at:
-# https://rstudio.github.io/distill/website.html
-
-# Learn more about publishing to GitHub Pages at:
-# https://rstudio.github.io/distill/publish_website.html#github-pages
+knitr::opts_chunk$set(echo = FALSE, warning=FALSE,message=FALSE)
 
 ```
 
+Welcome to the home page of Group-15 project website on **VAST Challenge Mini Challenge 1 and 3**. This project is part of the coursework of Visual Analytics and Applications, taught by Professor [Dr. Kam Tin Seong](https://www.smu.edu.sg/faculty/profile/9618/KAM-Tin-Seong) at Singapore Management University.
+
+The website covers the work carried out to develop interactive visualizations to solve the VAST challenge. The report also covers the previous work conducted in this challenge. A full step user guide is also provided for easy replication. For readers wishing to get more context quickly on the application, you may refer to the Poster tab. 
+
+#### explain about the website in detail in the above para
+
+**AUTHORS:**
+
+*   [Connie Xia Yi Jing]()  # put in linkedin
+
+*   [Nikitha Banda](https://www.linkedin.com/in/banda-nikitha)
+
+*   [Tan Kar Yee]() # put in linkedin
+
+
+**AFFILIATION:** School of Computing and Information Systems, Singapore Management University
+
+**PUBLISHED:** August 11, 2021

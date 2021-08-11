@@ -1,0 +1,16 @@
+---
+title: "Application"
+output:
+  distill::distill_article:
+    toc: true
+    toc_depth: 3
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning=FALSE,message=FALSE)
+```
+
+
+#### link of the r shiny is to be put here and
+
+#### link of r shiny github is to be put here

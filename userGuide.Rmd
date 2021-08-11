@@ -1,0 +1,13 @@
+---
+title: "Application User Guide"
+output:
+  distill::distill_article:
+    toc: true
+    toc_depth: 3
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning=FALSE,message=FALSE)
+```
+
+#### kar yee and nikitha will work on this
