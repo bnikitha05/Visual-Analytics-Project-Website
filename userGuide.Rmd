@@ -18,7 +18,7 @@ Download User Guide [here]()
 
 On this page, there is a short description of the application and an overview of the application navigation.
 
-<>
+![](img/img11.png)
 
 ### 2 History of GAStech Company
 
@@ -122,7 +122,7 @@ Upon selecting the checkbox,
 
 This tab focuses not on the whole company but rather on a single employee. It provides insights on the close associates to an employee and how frequently does the employee associates to other employees.
 
-<>
+![](img/img10.png)
 
 [1] Select the employee from the dropdown list of all employees in GAStech company.
 
