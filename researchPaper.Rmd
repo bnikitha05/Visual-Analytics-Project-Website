@@ -10,4 +10,4 @@ output:
 knitr::opts_chunk$set(echo = TRUE, warning=FALSE,message=FALSE)
 ```
 
-#### research paper in the required format
+Click [here](researchpaper/researchpaper.pdf) for the Research Paper.

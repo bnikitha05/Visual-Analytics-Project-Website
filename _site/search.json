@@ -5,14 +5,14 @@
       "title": "About",
       "author": [],
       "contents": "\r\nexlain the difference between MC1 and MC2 and build the story.\r\nexplain literature review. Why this is better than the 2014 challenge\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-08-11T16:12:29+08:00"
+      "last_modified": "2021-08-14T22:36:20+08:00"
     },
     {
       "path": "application.html",
       "title": "Application",
       "author": [],
       "contents": "\r\nlink of the r shiny is to be put here and\r\nlink of r shiny github is to be put here\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-08-11T16:12:30+08:00"
+      "last_modified": "2021-08-12T19:12:24+08:00"
     },
     {
       "path": "index.html",
@@ -20,28 +20,28 @@
       "description": "Does visual analytics help in investigations? Read on to find out! :D #suggest description\n",
       "author": [],
       "contents": "\r\nWelcome to the home page of Group-15 project website on VAST Challenge Mini Challenge 1 and 3. This project is part of the coursework of Visual Analytics and Applications, taught by Professor Dr. Kam Tin Seong at Singapore Management University.\r\nThe website covers the work carried out to develop interactive visualizations to solve the VAST challenge. The report also covers the previous work conducted in this challenge. A full step user guide is also provided for easy replication. For readers wishing to get more context quickly on the application, you may refer to the Poster tab.\r\nexplain about the website in detail in the above para\r\nAUTHORS:\r\nConnie Xia Yi Jing # put in linkedin\r\nNikitha Banda\r\nTan Kar Yee # put in linkedin\r\nAFFILIATION: School of Computing and Information Systems, Singapore Management University\r\nPUBLISHED: August 11, 2021\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-08-11T16:12:31+08:00"
+      "last_modified": "2021-08-12T19:12:25+08:00"
     },
     {
       "path": "poster.html",
       "title": "Poster",
       "author": [],
       "contents": "\r\nposter in the required format\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-08-11T16:15:50+08:00"
+      "last_modified": "2021-08-12T19:12:25+08:00"
     },
     {
       "path": "researchPaper.html",
       "title": "Research Paper",
       "author": [],
-      "contents": "\r\nresearch paper in the required format\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-08-11T16:12:33+08:00"
+      "contents": "\r\nClick here for the Research Paper.\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-08-14T22:56:58+08:00"
     },
     {
       "path": "userGuide.html",
       "title": "Application User Guide",
       "author": [],
       "contents": "\r\nkar yee and nikitha will work on this\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-08-11T16:12:34+08:00"
+      "last_modified": "2021-08-12T19:12:25+08:00"
     }
   ],
   "collections": []
