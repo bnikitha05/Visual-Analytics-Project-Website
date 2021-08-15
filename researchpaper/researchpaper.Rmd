@@ -88,6 +88,7 @@ Comparison clouds are used to visualise the similarity and differences of import
 
 ![](img/image03.png)
 
+
 Fig. x above shows the comparison cloud between six newsgroups based on the words taken from the published news articles' titles. Our application will have the option for choosing between viewing keywords from "Content of Articles" or "Titles of Articles". Moreover, users can choose the newsgroups they would have to like to compare from a dropdown list of all the newsgroups available. 
 
 The packages used to build this visualisation are **tidytext**, **tm** and **wordcloud**. **Tidytext** is used to convert text into a format that is visualisable with the use of 'unnext_tokens' function. **tm** has built in functions such as 'removeStopwords' to help in the removal of unimportant words. Lastly, the comparison cloud will be developed using the **wordcloud** package. 
@@ -98,7 +99,12 @@ Textnet is used for clustering of newsgroups. To represent the data in cluster f
 
 ![](img/image02.png)
 
+<<<<<<< HEAD
 The node color corresponds to the text communities, with the same color indicating a strong relationship between its components. In this way, clusters are formed to segment the newsgroups with similar characteristics in terms of the types of words used in the news articles. 
+=======
+
+The node color corresponds to the text communities, with the same colour indicating a strong relationship between its components. In this way, clusters are formed to segment the newsgroups with similar characteristics in terms of the types of words used in the news articles. 
+>>>>>>> 55128c1e2b8505f7ba492d07e81bd19206ab1ed8
 
 To delve into the cluster segments of different newsgroup, we visualize each segmentation as follows:
 
@@ -108,6 +114,7 @@ To delve into the cluster segments of different newsgroup, we visualize each seg
 Upon visualizing the components in each cluster, text plot visualizations are conducted to pull out the word co-occurrences between word-pairs, so as to determine the context and content of each clusters. 
 
 ![](img/image05.png)
+
 
 The main R packages used are **textnet**, **ggwordcloud**, **tidytext**, **udpipe** and **textplot**. **Textnet** is currently the only R package available to implement text network techniques in R. To display the word cloud by cluster, **ggwordcloud** was utilised. **Tidytext** helps to convert text into a format that is visualisable with the use of 'unnest_tokens' function. The **udpipe** package provides language-agnostic tokenisation, tagging, lemmatisation and dependency parsing of raw text, which is an essential part in natural language processing (NLP). Lastly, to plot data as a text plot, we will be needing the **textplot** package. 
 
@@ -119,29 +126,138 @@ Correlation graphs are plotted to determine the correlation between different ne
 
 The R packages used are **widyr** and **ggraph**. **Widyr** is able to cast a tidy dataset into a wide matrix, performs an operation such as computing the correlation on it, and then re-tidies the result. 'pairwise_cor' function is found in this package. **ggraph** is then used to plot the relationship between different newsgroups based on their correlation values. 
 
+<<<<<<< HEAD
 **TF-IDF**
 As mentioned in the **Review & Critics of Past Works** section, word cloud alone might not be very useful to visualize a collection of 'microblog' messages due to its consistency issue. As such, TF-IDF approach is more helpful when trying to pick out specific key events/topics of relevance. 
+=======
+**Term Frequency-Inverse Document Frequency (TF-IDF)**
+>>>>>>> 55128c1e2b8505f7ba492d07e81bd19206ab1ed8
 
+As mentioned in the **Review & Critics of Past Works** section, word cloud alone might not be very useful to visualise a collection of microblog message due to its consistency issue. As such, TF-IDF approach is more helpful when trying to pick out specific key events/topics of relevance. This approach aims to measure the importance of a word is to a document in a collection/corpus of documents, by including the inverse document frequency (IDF) to balance the term frequency (TF) used in wordclouds. Hence, we will view each hour of tweets as a document and all 5 hours of the dataset as the corpus, to determine the key events that dominate each hour. With that, TF-IDF can be a powerful heuristic to sieve out the most important events occurring during each period from the chatter spread throughout the dataset.  
+
+We plotted out both unigrams and bigrams to look at both the singular word and word-pairs respectively. 
+
+![](img/image07.png)
+
+
+The relevant R package used is **tidytext**, where the 'bind_tf_idf' function helps to compute and bind the term frequency, inverse document frequency and td-idf of a tidy text dataset to the dataset. 
 
 ### Network Graphs
-
-**Relationships of GASTech Employees**
+Network graphs are informative visualisations to mainly show the relationship between different entities. In this study, network graphs are created to visualise the different official and unofficial relationships of GASTech employees and the overall distribution flow of emails.
 
 **Email Flow**
 
-**Target Employee**
+The email distribution flow from one person to another is visualised in terms of a network graph. The thickness of the edge implies the number of email passed between two nodes. The nodes are grouped by the employees' **Current Employment Type**, and users also have the option to view select the email distribution flow on a daily basis or on a weekly basis.
 
 
-### Geospatial mapping
+![](img/image09.png)
 
+**Relationships among GASTech Employees**
+
+The email relationships of the employees are split into work-related and non-work related, in attempt to identify potential suspicious activities that might be transpiring between different employees. There are four different views of the network graphs, with the nodes sorted by "Citizenship", "Current Employment Type", "Gender" and "Current Employment Title". 
+
+![](img/image10.png)
+
+The main R packages needed to create network graphs are **tidygraph** and **ggraph**. Under **tidygraph**, the 'tbl_graph' function is used to convert data to an object to display network belons to this package. **ggraph** is used to plot the network object. 
+
+### Bar Charts
+Separate bar charts are plotted to look into the frequency of the microblog and call center reports coming in over a fixed time period of between 1700H to 2200H. Through that, we aim to discover the risk levels indicated by these data to draw out a basic timeline of major events that occurred during that evening. 
+
+A data table is also linked to the bar chart to show the exact messages that are received tagged to both time and location.
+
+**plotly** package is used in this visualisation to be able to create interactive web-based graphs. 
+
+### Geospatial Mapping
+Interactive geospatial mapping visualisation is performed so as to track the locations where those microblogs tweets and call center reports originate from. The interactive view mode allow layers to be removed or added, as well as show the exact messages by clicking on the points.
+
+The R package used is **tmap** to generate thematic maps with high flexibility and interactivity,
 
 # Application Insights
-Nullam semper imperdiet orci, at lacinia est aliquet et. Sed justo nibh, aliquet et velit at, pharetra consequat velit. Nullam nec ligula sagittis, adipiscing nisl sed, varius massa. Mauris quam ante, aliquet a nunc et, faucibus imperdiet libero. Suspendisse odio tortor, bibendum vel semper sit amet, euismod ac ante. Nunc nec dignissim turpis, ac blandit massa. Donec auctor massa ac vestibulum aliquam. Fusce auctor dictum lobortis. Vivamus tortor augue, convallis quis augue sit amet, laoreet tristique quam. Donec id volutpat orci. Suspendisse at mi vel elit accumsan porta ac ut diam. Nulla ut dapibus quam.
+From our Shiny application, different insights can be drawn to learn more about the Kronos Incident. 
+
+## Correlated News Groups
+The correlation graph shows that 
+## Frequently Occurring Phrases
+
+## Content of Newsgroups
+Looking into Fig. X, we can observe that "News Online Today" is the newsgroup that mostly talked about the situation in Kronos, with a majority of articles speaking about POK but little was spoken about the contamination and health of the Kronos villagers. Hence, this implies that "News Online Today" seems to be targeting the POK group the most.
+
+On the other hand, "The Continent" has been reporting on the calamity, evacuation and discharge, with little spoken about GASTech or POK. "Everyday News" reports more on the crashes and explosions occurring in Kronos. 
+
+The remaining three newsgroups appear to be international news outlets and their keywords vary diversely, with none specifically mentioning about the situation in Kronos. 
+
+## Context of Clusters 
+Clustering separated all of the newsgroups into six different clusters with the following characteristics:
+
+* Cluster 1 - Relationship between police, government and Elian Karel
+
+* Cluster 2 - POK in general and mentions of GASTech employees
+
+* Cluster 3 - Relationship between police, government and POK
+
+* Cluster 4 - CEO of GASTech company and company's investment plans
+
+* Cluster 5 - Nature of GASTech company as well as relationship between govenment and POK
+
+* Cluster 6 - Tension between police and POK + Health situation in Kronos
+
+## Email Flow and Distribution
+
+Based on the segregration between work related and non-work related emails, we are able to derive the following insights
+
+### Work Related Emails
+
+* Heavy weight assigned to Information Technology, eliminating any suspicious activity occurring in this department 
+* Employees in Engineering department seem to have more communication among themselves than the other departments
+* One particular IT employee who seems to be communicating with the Security and Administration department but not with their own department, which raises suspicion
+
+### Non-work Related Emails 
+
+* Executive Department has more non-work related emails than work-related emails 
+* One IT employee seems to be the most common receiver and sender of non-work related emails 
+* Heavy transmission of unofficial emails among Administration Department
+
+## Sensitive Emails Identified 
+
+
+## Microblog Tweets Analysis
+
+![](img/image08.png)
+
+From this bigram plotted, we are able to extract certain important information as follows:
+
+* 1800H+: The fire was likely related to a building, the apartment complex of Dancing Dolphon 
+* 1900H+: Shots were fired, with a trapped resident and black van being other points of interest.
+* 2000H+: A firefighter was injured. A phrase “alexandrias ithakis” appears (this is the cross-street where the standoff happened). Several businesses appear to be affected as well.
+* 2100H+: Besides the arrests already spotted in the wordcloud, an alarming event of explosions heard also appears.
+
+## Risk Levels From Call Center Reports
+The basic timeline of major event identified over the course of the evening with its respective risk ratings (on a scale of 1-5, 5 being highest) are as follows:
+
+1. The first big event was a fire detected at about 1830H (exact time: 1842H). An ambulance and fire truck was dispatched to the fire. Crowd control was also requested. The risk appears to have elevated, but appeared under control (risk level 3).
+
+2. The next big event happened from 1915H: what appeared as a vehicle accident (exact time: 1919H) turned out to be a rogue black van running amok in the crowd. It was pursued by police units. Risk level would have gone up to 4, due to the uncontrollable nature of the van.
+
+3. From 1930H, at least one officer was down because of the event (exact time: 1941H). A dire emergency was called, and additional support was requested. Risk level would have been at 5 (given that the situation was termed “dire”).
+
+4. Nearing the end after the black van and fire incident seemed to have died down, from 2045H there were several reports of crime scene investigations, with continued suspicious reports. Risk level would be at 3 (moderate).
+
+## Map of Key Messages with Geolocation
+
+![](img/image11.png)
+
+From Fig. X, we are able observe that there are three locations with high density of message origination, suggesting that major events are occurring around those location clusters, 
+
+The red cluster appears to be the place with highest risk and potential consequences, due to the high number of negative tweets and several serious call center reports spread over time. Both types of messages mention the standoff and police casualties. 
+
+The blue cluster also has many call center reports, but lesser negative tweets. Closer inspection by clicking on the points show that these tweets are mainly about the fire which appeared to have been under control, and the call center reports are mostly about dispatch requests. 
+
+The brown cluster seems to be about the explosion that occurred late. Closer inspection shows that many of such messages are sent by a spam account footfingers. 
 
 # Conclusion and Future Work
-The study 
+In conclusion, this study attempts to draw out insights related to the disappearance of the GASTech employees from a collection of artifacts and emails related to the GASTech company. The analysis in our web application is scoped to investigate how events unfolded on the day of incident and prove the reputation of GASTech since its establishment. 
 
-Further developments to the application can be implemented such that the application is able to take out other text data such as text corpus  
+Further developments to the application can be implemented such that users can upload their own datasets, like text corpus into the application to conduct text and visual analysis on new datasets. 
 
 # References
 
