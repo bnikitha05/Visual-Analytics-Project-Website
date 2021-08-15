@@ -197,12 +197,36 @@ This tab looks at the call centre reports, which are organized, low in numbers a
 
 #### 3.2.2 By Microblog Messages
 
-This tab looks at the microblog messages. While more messy and noisy, they contain significant information like crowd levels and public reactions to add to the risk level evaluation. We use various quantitative estimates to assess risk.
+This tab looks at the microblog messages over time. While more messy and noisy, they contain significant information like crowd levels and public reactions to add to the risk level evaluation. We use various quantitative estimates to assess risk.
 
 ![](img/mc3/Slide10.JPG)
 
-[1]
+[1] Select the time intervals to bin the messages. Similar to the function for call centre reports.
 
-[2]
+[2] Choose whether to include the tf-idf bigram plot from the Exploration phase, which provides additional info on the key topics of each hour.
 
-[3]
+[3] Cycle through the different plots over time. They include the default Message Count plot, as well as the following:
+
+*Number of unique authors*
+![](img/mc3/Slide11.JPG)
+
+*Overall message sentiment (using the [AFINN](http://www2.imm.dtu.dk/pubdb/views/publication_details.php?id=6010) and [NRC](http://saifmohammad.com/WebPages/NRC-Emotion-Lexicon.htm) lexicons. See this [link](https://www.tidytextmining.com/sentiment.html) for details of the sentiment analysis provided by the tidytext package.)*
+![](img/mc3/Slide12.JPG)
+
+![](img/mc3/Slide13.JPG)
+
+### 3.3	Message Stream Geomap
+
+This section uses interactive geospatial visualisation to show where the key events are occurring spatially, by plotting the messages as points on the map.
+
+![](img/mc3/Slide14.JPG)
+
+[1] Select whether to include only the microblog messages, or only the call centre reports, or to include both.
+
+[2] Select the timeframe of messages to be included in the geomap.
+
+[3] Select the amount of jitter. Lower values will make the location of points more accurate (but multiple points will tend to clump together making it hard to distinguish), whereas higher values will provide more random spreading of the points (but will also decrease location accuracy).
+
+[4] Select the alpha value. Lower values will make the points more transparent (allows overlapping to be seen, but colour will be fainter).
+
+[5] Select the size of each point representing a message.

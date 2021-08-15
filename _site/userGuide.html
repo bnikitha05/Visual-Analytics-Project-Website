@@ -2030,7 +2030,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </script>
 
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
+  <script src="site_libs/header-attrs-2.8/header-attrs.js"></script>
   <script src="site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2095,6 +2095,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <li><a href="#on-the-day-of-incident">3 On the Day of Incident</a></li>
 <li><a href="#message-stream-exploration">3.1 Message Stream Exploration</a></li>
 <li><a href="#risk-level-timeline">3.2 Risk level timeline</a></li>
+<li><a href="#message-stream-geomap">3.3 Message Stream Geomap</a></li>
 </ul>
 </nav>
 </div>
@@ -2188,11 +2189,22 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <p><img src="img/mc3/Slide9.JPG" /></p>
 <p>[3] Choose whether to include the data table, to see the details of the reports.</p>
 <h4 id="by-microblog-messages">3.2.2 By Microblog Messages</h4>
-<p>This tab looks at the microblog messages. While more messy and noisy, they contain significant information like crowd levels and public reactions to add to the risk level evaluation. We use various quantitative estimates to assess risk.</p>
+<p>This tab looks at the microblog messages over time. While more messy and noisy, they contain significant information like crowd levels and public reactions to add to the risk level evaluation. We use various quantitative estimates to assess risk.</p>
 <p><img src="img/mc3/Slide10.jpg" /></p>
-<p>[1]</p>
-<p>[2]</p>
-<p>[3]</p>
+<p>[1] Select the time intervals to bin the messages. Similar to the function for call centre reports.</p>
+<p>[2] Choose whether to include the tf-idf bigram plot from the Exploration phase, which provides additional info on the key topics of each hour.</p>
+<p>[3] Cycle through the different plots over time. They include the default Message Count plot, as well as the following:</p>
+<p><em>Number of unique authors</em> <img src="img/mc3/Slide11.JPG" /></p>
+<p><em>Overall message sentiment (using the <a href="http://www2.imm.dtu.dk/pubdb/views/publication_details.php?id=6010">AFINN</a> and <a href="http://saifmohammad.com/WebPages/NRC-Emotion-Lexicon.htm">NRC</a> lexicons. See this <a href="https://www.tidytextmining.com/sentiment.html">link</a> for details of the sentiment analysis provided by the tidytext package.)</em> <img src="img/mc3/Slide12.JPG" /></p>
+<p><img src="img/mc3/Slide13.JPG" /></p>
+<h3 id="message-stream-geomap">3.3 Message Stream Geomap</h3>
+<p>This section uses interactive geospatial visualisation to show where the key events are occurring spatially, by plotting the messages as points on the map.</p>
+<p><img src="img/mc3/Slide14.JPG" /></p>
+<p>[1] Select whether to include only the microblog messages, or only the call centre reports, or to include both.</p>
+<p>[2] Select the timeframe of messages to be included in the geomap.</p>
+<p>[3] Select the amount of jitter. Lower values will make the location of points more accurate (but multiple points will tend to clump together making it hard to distinguish), whereas higher values will provide more random spreading of the points (but will also decrease location accuracy).</p>
+<p>[4] Select the alpha value. Lower values will make the points more transparent (allows overlapping to be seen, but colour will be fainter).</p>
+<p>[5] Select the size of each point representing a message.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
