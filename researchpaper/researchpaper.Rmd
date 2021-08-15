@@ -41,11 +41,11 @@ A study conducted by Peking University (Wang, C. et al. 2014) on Mini Challenge 
 While word clouds are generally useful in identifying topic content for a broad overview as shown in the study performed by Tianjing University (Yang S. and Jiang, X. 2014) on Mini Challenge 3, their results might be less consistent and harder to make sense of due to the presence of spam data. Hence, to be able to distinguish important events from typical chatter, TF-IDF would be a better statistical tool to use. 
 
 ## Network Graphs
-<<<<<<< HEAD
+
 Network graphs are a good visualisation tool to establish the relationships between different parties of interest. By and large, network graphs would be densely populated with nodes and edges if there are numerous parties involved. Yet, this brings about an issue of overcrowding and overlaps of texts, making the entire visualisation looks cluttered (Wang, C. et al. 2014).
-=======
+
 Network graphs are a good visualization tool to establish the relationships between different parties of interest. By and large, network graphs would be densely populated with nodes and edges if there are numerous parties involved. Yet, this brings about an issue of overcrowding and overlaps of texts, making the entire visualization looks cluttered.
->>>>>>> 14d4b20d2d10c05d7eca5a032d7dead935dba259
+
 
 One way to overcome this issue of cluttering will be to divide the network graph into sub graphs. When the graph is divided, the density of the visualization will be reduced, with the readability enhanced. 
 
@@ -92,11 +92,11 @@ Our application will build several text analysis outputs to break down large chu
 
 **Comparison Cloud**
 
-<<<<<<< HEAD
+
 Comparison clouds are used to visualise the similarity and differences of important words used by different newsgroups. Wordclouds are able to extract out keyword metadata and the frequency of the appearance of a particular word in the articles is determined by the size of the word in the wordcloud (Halvey M.J. and Keane, M.T. 2007). This type of visualisation is useful in the quick pickup of prominent terms to determine the significance of those words. In turn, based on the keywords extracted out, we are also able to get a sense of the sentiments and attitude of these newsgroups regarding their articles about GASTech. Our application will have the option for choosing between viewing keywords from "Content of Articles" or "Titles of Articles". Moreover, users can choose the newsgroups they would have to like to compare from a dropdown list of all the newsgroups available. 
-=======
+
 Comparison clouds are used to visualize the similarity and differences of important words used by different newsgroups. A comparison cloud was preferred over wordcloud because wordcloud tend to extract out keyword metadata and the frequency of the appearance of a particular word in only one newsgroup and it is not possible to compare various newsgroups. Visualization of comparison clouds is useful in the quick pickup of prominent terms to determine the significance of those words. In turn, based on the keywords extracted out, we are also able to get a sense of the sentiments and attitude of these newsgroups regarding their articles about GASTech. Our application will have the option for choosing between viewing keywords from "Content of Articles" or "Titles of Articles". Moreover, users can choose the newsgroups they would have to like to compare from a dropdown list of all the newsgroups available. 
->>>>>>> 14d4b20d2d10c05d7eca5a032d7dead935dba259
+
 
 The packages used to build this visualization are **tidytext**, **tm** and **wordcloud**. **Tidytext** is used to convert text into a format that is visualisable with the use of 'unnext_tokens' function. **tm** has built in functions such as 'removeStopwords' to help in the removal of unimportant words. Lastly, the comparison cloud will be developed using the **wordcloud** package. 
 
@@ -123,21 +123,20 @@ The main R packages used are **textnet**, **ggwordcloud**, **tidytext**, **udpip
 
 **Correlation Graphs** 
 
-<<<<<<< HEAD
+
 Correlation graphs are plotted to determine the correlation between different newsgroups. From this, we are able to determine which newsgroups might be highly related in terms of their reports of certain events over the years. The correlation values are obtained using the widely used Pearson method (Glen, S.).
-=======
+
 Correlation graphs are plotted to determine the correlation between different newsgroups. From this, we are able to determine how strongly or weakly the newsgroups are related to each other. The correlation values are obtained using the widely used Pearson method.
->>>>>>> 14d4b20d2d10c05d7eca5a032d7dead935dba259
 
 The R packages used are **widyr** and **ggraph**. **Widyr** is able to cast a tidy dataset into a wide matrix, performs an operation such as computing the correlation on it, and then re-tidies the result. 'pairwise_cor' function is found in this package. **ggraph** is then used to plot the relationship between different newsgroups based on their correlation values. 
 
 **Term Frequency-Inverse Document Frequency (TF-IDF)**
 
-<<<<<<< HEAD
+
 As mentioned in the **Review & Critics of Past Works** section, word cloud alone might not be very useful to visualise a collection of microblog message due to its consistency issue. As such, TF-IDF approach is more helpful when trying to pick out specific key events/topics of relevance. This approach aims to measure the importance of a word is to a document in a collection/corpus of documents, by including the inverse document frequency (IDF) to balance the term frequency (TF) used in wordclouds (Silge, J. and Robinson, D. 2021). Hence, we will view each hour of tweets as a document and all 5 hours of the dataset as the corpus, to determine the key events that dominate each hour. With that, TF-IDF can be a powerful heuristic to sieve out the most important events occurring during each period from the chatter spread throughout the dataset. Both unigrams and bigrams are plotted to look at both the singular word and word-pairs respectively. 
-=======
+
 As mentioned in the **Review & Critics of Past Works** section, word cloud alone might not be very useful to visualize a collection of microblog message due to its consistency issue. As such, TF-IDF approach is more helpful when trying to pick out specific key events/topics of relevance. This approach aims to measure the importance of a word is to a document in a collection/corpus of documents, by including the inverse document frequency (IDF) to balance the term frequency (TF) used in wordclouds. Hence, we will view each hour of tweets as a document and all 5 hours of the dataset as the corpus, to determine the key events that dominate each hour. With that, TF-IDF can be a powerful heuristic to sieve out the most important events occurring during each period from the chatter spread throughout the dataset. Both unigrams and bigrams are plotted to look at both the singular word and word-pairs respectively. 
->>>>>>> 14d4b20d2d10c05d7eca5a032d7dead935dba259
+
 
 The relevant R package used is **tidytext**, where the 'bind_tf_idf' function helps to compute and bind the term frequency, inverse document frequency and td-idf of a tidy text dataset to the dataset. 
 
@@ -190,6 +189,7 @@ The remaining three newsgroups appear to be international news outlets and their
 *Fig. 7*
 
 Clustering using text net separated all of the newsgroups into six different clusters. The content across all articles within each cluster mostly talks about of the following characteristics:
+
 * Cluster 1 - Relationship between police, government and leader of POK Elian Karel with very little involvement of GAStech company
 * Cluster 2 - POK in general and mentions of GASTech employees
 * Cluster 3 - Relationship between police, government and POK

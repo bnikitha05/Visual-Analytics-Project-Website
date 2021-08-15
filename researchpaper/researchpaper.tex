@@ -130,37 +130,44 @@ This interactive Shiny application aims to provide information on:
 Works}\label{review-critics-of-past-works}}
 
 This study is based on the VAST Challenge 2021, which in turn is adapted
-from a similar VAST Challenge in 2014. Literature review is conducted on
-the previous VAST Challenge 2014 submissions to look at the analytical
-techniques used to solve the challenge back then, even though the exact
-questions were slightly different. While useful, some of the techniques
-adopted have certain areas that can be further improved.
+from a similar VAST Challenge in 2014 (IEEE 2021). Literature review is
+conducted on the previous VAST Challenge 2014 submissions to look at the
+analytical techniques used to solve the challenge back then, even though
+the exact questions were slightly different. While useful, some of the
+techniques adopted have certain areas that can be further improved.
 
 \hypertarget{text-visualisations}{%
 \subsection{Text Visualisations}\label{text-visualisations}}
 
-A study conducted by Peking University (2014) on Mini Challenge 1
-presented their text analysis in a form of a timeline to showcase
-different events occurring between January 20 -- 21. Articles in the
-form of text boxes were layered over the timeline for comparison. While
-it showcased all the news reporting of different events occurring over
-the two-day time period, it might be difficult for a user to interpret
-the main concepts of those articles. Hence, a better alternative might
-be to utilise a word cloud function to pull out key words of the
-articles for view and interpretation. In addition, interactive
-comparisons of different newsgroups can also be performed, giving the
-user flexibility to choose the newsgroups they are interested in to view
-and evaluate.
+A study conducted by Peking University (Wang, C. et al.~2014) on Mini
+Challenge 1 presented their text analysis in a form of a timeline to
+showcase different events occurring between January 20 -- 21. Articles
+in the form of text boxes were layered over the timeline for comparison.
+While it showcased all the news reporting of different events occurring
+over the two-day time period, it might be difficult for a user to
+interpret the main concepts of those articles. Hence, a better
+alternative might be to utilise a word cloud function to pull out key
+words of the articles for view and interpretation. In addition,
+interactive comparisons of different newsgroups can also be performed,
+giving the user flexibility to choose the newsgroups they are interested
+in to view and evaluate.
 
 While word clouds are generally useful in identifying topic content for
 a broad overview as shown in the study performed by Tianjing University
-(2014) on Mini Challenge 3, their results might be less consistent and
-harder to make sense of due to the presence of spam data. Hence, to be
-able to distinguish important events from typical chatter, TF-IDF would
-be a better statistical tool to use.
+(Yang S. and Jiang, X. 2014) on Mini Challenge 3, their results might be
+less consistent and harder to make sense of due to the presence of spam
+data. Hence, to be able to distinguish important events from typical
+chatter, TF-IDF would be a better statistical tool to use.
 
 \hypertarget{network-graphs}{%
 \subsection{Network Graphs}\label{network-graphs}}
+
+Network graphs are a good visualisation tool to establish the
+relationships between different parties of interest. By and large,
+network graphs would be densely populated with nodes and edges if there
+are numerous parties involved. Yet, this brings about an issue of
+overcrowding and overlaps of texts, making the entire visualisation
+looks cluttered (Wang, C. et al.~2014).
 
 Network graphs are a good visualization tool to establish the
 relationships between different parties of interest. By and large,
@@ -269,6 +276,20 @@ understandable visualization for users to view:
 
 \textbf{Comparison Cloud}
 
+Comparison clouds are used to visualise the similarity and differences
+of important words used by different newsgroups. Wordclouds are able to
+extract out keyword metadata and the frequency of the appearance of a
+particular word in the articles is determined by the size of the word in
+the wordcloud (Halvey M.J. and Keane, M.T. 2007). This type of
+visualisation is useful in the quick pickup of prominent terms to
+determine the significance of those words. In turn, based on the
+keywords extracted out, we are also able to get a sense of the
+sentiments and attitude of these newsgroups regarding their articles
+about GASTech. Our application will have the option for choosing between
+viewing keywords from ``Content of Articles'' or ``Titles of Articles''.
+Moreover, users can choose the newsgroups they would have to like to
+compare from a dropdown list of all the newsgroups available.
+
 Comparison clouds are used to visualize the similarity and differences
 of important words used by different newsgroups. A comparison cloud was
 preferred over wordcloud because wordcloud tend to extract out keyword
@@ -292,13 +313,15 @@ cloud will be developed using the \textbf{wordcloud} package.
 
 \textbf{Textnet and Text Plot}
 
-Textnet is used for clustering of newsgroups. To represent the data in
-cluster format, the data has to be converted to two columns. The first
-column would be the set of words found in news articles and the second
-is the name of newsgroups themselves. That way, a network can be created
-where newsgroups are connected by their use of the same words. The
-thickness of the edge connecting any two nodes represents how similar
-the two nodes are.
+Textnet can be used to help in structuring text data, by showcasing
+relationships between neighbouring text data of relevance (Trigg, R.H.
+and Weiser, M. 1986). Hence, textnet can be used for clustering of
+newsgroups. To represent the data in cluster format, the data has to be
+converted to two columns. The first column would be the set of words
+found in news articles and the second is the name of newsgroups
+themselves. That way, a network can be created where newsgroups are
+connected by their use of the same words. The thickness of the edge
+connecting any two nodes represents how similar the two nodes are.
 
 \includegraphics{img/image02.png} \emph{Fig, 1 Relationship between
 different Newsgroups}
@@ -337,6 +360,12 @@ package.
 \textbf{Correlation Graphs}
 
 Correlation graphs are plotted to determine the correlation between
+different newsgroups. From this, we are able to determine which
+newsgroups might be highly related in terms of their reports of certain
+events over the years. The correlation values are obtained using the
+widely used Pearson method (Glen, S.).
+
+Correlation graphs are plotted to determine the correlation between
 different newsgroups. From this, we are able to determine how strongly
 or weakly the newsgroups are related to each other. The correlation
 values are obtained using the widely used Pearson method.
@@ -349,6 +378,21 @@ re-tidies the result. `pairwise\_cor' function is found in this package.
 newsgroups based on their correlation values.
 
 \textbf{Term Frequency-Inverse Document Frequency (TF-IDF)}
+
+As mentioned in the \textbf{Review \& Critics of Past Works} section,
+word cloud alone might not be very useful to visualise a collection of
+microblog message due to its consistency issue. As such, TF-IDF approach
+is more helpful when trying to pick out specific key events/topics of
+relevance. This approach aims to measure the importance of a word is to
+a document in a collection/corpus of documents, by including the inverse
+document frequency (IDF) to balance the term frequency (TF) used in
+wordclouds (Silge, J. and Robinson, D. 2021). Hence, we will view each
+hour of tweets as a document and all 5 hours of the dataset as the
+corpus, to determine the key events that dominate each hour. With that,
+TF-IDF can be a powerful heuristic to sieve out the most important
+events occurring during each period from the chatter spread throughout
+the dataset. Both unigrams and bigrams are plotted to look at both the
+singular word and word-pairs respectively.
 
 As mentioned in the \textbf{Review \& Critics of Past Works} section,
 word cloud alone might not be very useful to visualize a collection of
@@ -467,14 +511,26 @@ about the situation in Kronos.
 
 Clustering using text net separated all of the newsgroups into six
 different clusters. The content across all articles within each cluster
-mostly talks about of the following characteristics: * Cluster 1 -
-Relationship between police, government and leader of POK Elian Karel
-with very little involvement of GAStech company * Cluster 2 - POK in
-general and mentions of GASTech employees * Cluster 3 - Relationship
-between police, government and POK * Cluster 4 - CEO of GASTech company
-and company's investment plans * Cluster 5 - Nature of GASTech company
-as well as relationship between government and POK * Cluster 6 - Tension
-between police and POK + Health situation in Kronos
+mostly talks about of the following characteristics:
+
+\begin{itemize}
+\tightlist
+\item
+  Cluster 1 - Relationship between police, government and leader of POK
+  Elian Karel with very little involvement of GAStech company
+\item
+  Cluster 2 - POK in general and mentions of GASTech employees
+\item
+  Cluster 3 - Relationship between police, government and POK
+\item
+  Cluster 4 - CEO of GASTech company and company's investment plans
+\item
+  Cluster 5 - Nature of GASTech company as well as relationship between
+  government and POK
+\item
+  Cluster 6 - Tension between police and POK + Health situation in
+  Kronos
+\end{itemize}
 
 \hypertarget{correlation-between-articles}{%
 \subsection{Correlation between
