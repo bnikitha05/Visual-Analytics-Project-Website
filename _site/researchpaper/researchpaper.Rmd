@@ -121,24 +121,62 @@ Correlation graphs are plotted to determine the correlation between different ne
 
 The R packages used are **widyr** and **ggraph**. **Widyr** is able to cast a tidy dataset into a wide matrix, performs an operation such as computing the correlation on it, and then re-tidies the result. 'pairwise_cor' function is found in this package. **ggraph** is then used to plot the relationship between different newsgroups based on their correlation values. 
 
-**TF-IDF**
-As mentioned in the **Review & Critics of Past Works** section, word cloud alone might not be very useful to visualise a collection of microblog message due to its consistency issue. As such, TF-IDF approach is more helpful when trying to pick out specific key events/topics of relevance. 
+**Term Frequency-Inverse Document Frequency (TF-IDF)**
 
+As mentioned in the **Review & Critics of Past Works** section, word cloud alone might not be very useful to visualise a collection of microblog message due to its consistency issue. As such, TF-IDF approach is more helpful when trying to pick out specific key events/topics of relevance. This approach aims to measure the importance of a word is to a document in a collection/corpus of documents, by including the inverse document frequency (IDF) to balance the term frequency (TF) used in wordclouds. Hence, we will view each hour of tweets as a document and all 5 hours of the dataset as the corpus, to determine the key events that dominate each hour. With that, TF-IDF can be a powerful heuristic to sieve out the most important events occurring during each period from the chatter spread throughout the dataset.  
+
+We plotted out both unigrams and bigrams to look at both the singular word and word-pairs respectively. 
+
+![](img/image07.png)
+
+The relevant R package used is **tidytext**, where the "bind_tf_idf" function helps to compute and bind the term frequency, inverse document frequency and td-idf of a tdy text dataset to the dataset. 
 
 ### Network Graphs
-
-**Relationships of GASTech Employees**
+Network graphs are informative visualisations to mainly show the relationship between different entities. In this study, network graphs are created to visualise the different official and unofficial relationships of GASTech employees and the overall distribution flow of emails.
 
 **Email Flow**
 
-**Target Employee**
+The email distribution flow from one person to another is visualised in terms of a network graph. The thickness of the edge implies the number of email passed between two nodes. The nodes are grouped by the employees' **Current Employment Type**, and users also have the option to view select the email distribution flow on a daily basis or on a weekly basis.
 
+![](img/image09.png)
+
+**Relationships among GASTech Employees**
+
+The email relationships of the employees are split into work-related and non-work related, in attempt to identify potential suspicious activities that might be transpiring between different employees. There are four different views of the network graphs, with the nodes sorted by "Citizenship", "Current Employment Type", "Gender" and "Current Employment Title". 
+
+![](img/image10.png)
+
+The main R packages needed to create network graphs are **tidygraph** and **ggraph**. Under **tidygraph**, the "tbl_graph" function is used to convert data to an object to display network belons to this package. **ggraph** is used to plot the network object. 
 
 ### Geospatial mapping
 
+here
 
 # Application Insights
-Nullam semper imperdiet orci, at lacinia est aliquet et. Sed justo nibh, aliquet et velit at, pharetra consequat velit. Nullam nec ligula sagittis, adipiscing nisl sed, varius massa. Mauris quam ante, aliquet a nunc et, faucibus imperdiet libero. Suspendisse odio tortor, bibendum vel semper sit amet, euismod ac ante. Nunc nec dignissim turpis, ac blandit massa. Donec auctor massa ac vestibulum aliquam. Fusce auctor dictum lobortis. Vivamus tortor augue, convallis quis augue sit amet, laoreet tristique quam. Donec id volutpat orci. Suspendisse at mi vel elit accumsan porta ac ut diam. Nulla ut dapibus quam.
+From our Shiny application, different insights can be drawn to learn more about the Kronos Incident. 
+
+## Correlated News Groups
+
+## Frequently Occurring Phrases
+
+## Content of Newsgroups
+
+## Context of Clusters 
+
+## Email Flow and Distribution 
+
+## Sensitive Emails Identified 
+
+## Microblog Tweets Analysis
+
+![](img/image08.png)
+
+From this bigram plotted, we are able to extract certain important information as follows:
+
+* 1800H+: The fire was likely related to a building, the apartment complex of Dancing Dolphon 
+* 1900H+: Shots were fired, with a trapped resident and black van being other points of interest.
+* 2000H+: A firefighter was injured. A phrase “alexandrias ithakis” appears (this is the cross-street where the standoff happened). Several businesses appear to be affected as well.
+* 2100H+: Besides the arrests already spotted in the wordcloud, an alarming event of explosions heard also appears.
 
 # Conclusion and Future Work
 The study 
