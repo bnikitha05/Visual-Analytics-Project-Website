@@ -5,14 +5,14 @@
       "title": "About",
       "author": [],
       "contents": "\r\nThe fictitious Kronos Incident saw the disappearance of several employees from the Tethys-based GASTech in January 2014 after a successful initial public offering (IPO) of the company. Given that GASTech has not been very environmentally friendly in its operations of a natural gas production site in the island country of Kronos, it was suspected that a Kronos-based organisation (POK) is involved in the disappearance of the employees, as a form of retaliation. In order to have a better idea on what exactly transpired to lead to the vanishing of the GASTech employees, we will be applying visual analytical techniques on the datasets provided.\r\nThis study will be handling visualisations on newspaper articles, employee records and emails, call center reports and microblog tweets before structuring them into an interactive web application. Users can then investigate the application and understand more about GASTech’s reputation. Furthermore, one can navigate around the app to find out how certain events unfolded on the incident day itself.\r\nThe interactive Shiny app aims to provide information on:\r\nMedia portrayal of GASTech over the years\r\nRelationships among GASTech, POK, the APA and Government\r\nMeaningful event reports during the incident day\r\nRisks identified during the incident day and their corresponding locations\r\nexplain literature review. Why this is better than the 2014 challenge\r\nWill summarise and add in later >.<\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-08-15T13:53:40+08:00"
+      "last_modified": "2021-08-15T14:02:59+08:00"
     },
     {
       "path": "application.html",
       "title": "Application",
       "author": [],
       "contents": "\r\nOur R Shiny Application can be found here: Viz-Investigation of Kronos Incident\r\nThe source code and data are available at GitHub.com\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-08-15T13:47:22+08:00"
+      "last_modified": "2021-08-15T14:03:01+08:00"
     },
     {
       "path": "index.html",
@@ -20,28 +20,28 @@
       "description": "Does visual analytics help in investigations? Read on to find out! :D #suggest description\n",
       "author": [],
       "contents": "\r\nWelcome to the home page of Group-15 project website on VAST Challenge Mini Challenge 1 and 3. This project is part of the coursework of Visual Analytics and Applications, taught by Professor Dr. Kam Tin Seong at Singapore Management University.\r\nThe website covers the work carried out to develop interactive visualizations to solve the VAST challenge. The report also covers the previous work conducted in this challenge. A full step user guide is also provided for easy replication. For readers wishing to get more context quickly on the application, you may refer to the Poster tab.\r\nexplain about the website in detail in the above para\r\nAUTHORS:\r\nConnie Xia Yi Jing # put in linkedin\r\nNikitha Banda\r\nTan Kar Yee # put in linkedin\r\nAFFILIATION: School of Computing and Information Systems, Singapore Management University\r\nPUBLISHED: August 11, 2021\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-08-15T13:47:22+08:00"
+      "last_modified": "2021-08-15T14:03:03+08:00"
     },
     {
       "path": "poster.html",
       "title": "Poster",
       "author": [],
       "contents": "\r\nClick here for the Poster.\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-08-15T14:01:26+08:00"
+      "last_modified": "2021-08-15T14:03:05+08:00"
     },
     {
       "path": "researchPaper.html",
       "title": "Research Paper",
       "author": [],
       "contents": "\r\nClick here for the Research Paper.\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-08-15T13:47:22+08:00"
+      "last_modified": "2021-08-15T14:03:08+08:00"
     },
     {
       "path": "userGuide.html",
       "title": "Application User Guide",
       "author": [],
       "contents": "\r\n\r\nContents\r\nUser Guide: Viz-Investigation of Kronos Incident\r\n1 Introduction Page\r\n2 History of GAStech Company\r\n2.1 Text Analysis\r\n2.2 Network Graph\r\n3 On the Day of Incident\r\n\r\nDownload User Guide here\r\nUser Guide: Viz-Investigation of Kronos Incident\r\n1 Introduction Page\r\nOn this page, there is a short description of the application and an overview of the application navigation.\r\n\r\n2 History of GAStech Company\r\nThis sub section of the application is to set the scene of the history that the GAStech company has had in Kronos. It provides information of the type of reputation and relations the company has had over the years with the citizens of Kronos and the protesters of “POK” in general.\r\n2.1 Text Analysis\r\nInsights on the news paper articles published from the start of establishment of the company in Kronons all the way to the year of the incident can be drawn from this section. It involves a lot of text data being visualized and cluster analysis.\r\n2.1.1 Comparison Cloud of Articles\r\nThis is a comparison word cloud of newspaper articles that were published over the years that GAStech company has been established. The differences in the type of content written across various newspaper groups can be visualized.\r\n [1] Select the type of data to populate the cloud. Content represents the words within the articles and title are the titles of articles.\r\n[2] One or more number of newspaper groups can be selected from the dropdown list of all news groups available to compare the articles of those newspapers.\r\n2.1.2 Cluster Analysis\r\nThis clustering is a “TextNet” that identifies those newsgroups that are similar based on the type of words they use. The darker the edge, the more similar those newsgroups are. All the newspaper groups that we have are segregated into 6 clusters overall.\r\n\r\n[1] Select the number of edges a node should have to visualize only those node names.\r\n[2] Select the cluster group number to view the newspaper groups in that cluster more clearly.\r\n2.1.3 Word Co-occurrence\r\nThis visualization is a “Text Plot” that shows the collections of word pair and how frequent these word pairs occur represented by the thickness of the edges between these words. The thicker the edge, the more frequently those words are used together.\r\n [1] Select the cluster number to view those word that are commonly used together.\r\n[2] Enter the number of word pars to display.\r\n[3] Select checkbox to view “Bigram plot” for a more detailed understanding of which words comes first the which word follows.\r\nUpon selecting the checkbox,\r\n\r\n[4] Enter the number of times the phrases should occur for them to appear on the plot.\r\n2.1.4 Correlation of Newsgroups\r\nIn this tab, the correlation value of the newsgroups can be identified. Previously we have seen which newsgroups are similar and how they have been clustered but, in this tab, we can visualize the correlation value between them.\r\n [1] Select the range of correlation value.\r\n[2] Select the checkbox to view word clouds of two different newsgroups and compare how similar or different they are.\r\nUpon selecting the checkbox,\r\n\r\n[3] Select the first newspaper group from the dropdown to visualize its word cloud.\r\n[4] Select the number of words to be visualized in the first word cloud.\r\n[5] Select the second newsgroup.\r\n[6] Select the number of words to be visualized in the second word cloud.\r\n2.2 Network Graph\r\nUnder this sub section, insights on employees working within the GAStech company can be extracted. It consists of both the official and unofficial emails sent across the company 2 weeks before the incident. The behavior of employees within these 2 weeks can provide vital information in this investigation.\r\n2.2.1 Relationships\r\nThis tab shows the network of work-related emails and non-work-related emails exchanged across all employees. The employees are represented by nodes and the thickness of edges represents the number of emails exchanged between the two nodes. The thicker the edge, the greater number of emails exchanged.\r\n [1] Select the type of email network to visualize.\r\n[2] Select any type of identification of the nodes from the dropdown list.\r\n2.2.2 Flow of Emails\r\nThe traffic of emails that were exchanged in the 2 weeks can be split into the date they were sent or the weekday. This is useful to identify the day where there were most emails exchanged across the GAStech company.\r\n [1] Select the distribution of emails across the 2 weeks\r\n[2] Select the checkbox to zoom in the emails exchanged on a specific date\r\nUpon selecting the checkbox,\r\n\r\n[3] Select any one date from the dropdown list\r\n[4] Select the mode of identifying the nodes(employees)\r\n[5] Check the checkbox to display the names of the employees represented by the nodes\r\n2.2.3 Target Employee\r\nThis tab focuses not on the whole company but rather on a single employee. It provides insights on the close associates to an employee and how frequently does the employee associates to other employees.\r\n\r\n[1] Select the employee from the dropdown list of all employees in GAStech company.\r\n[2] Select the identification of the nodes.\r\n3 On the Day of Incident\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-08-15T13:47:22+08:00"
+      "last_modified": "2021-08-15T14:03:11+08:00"
     }
   ],
   "collections": []
