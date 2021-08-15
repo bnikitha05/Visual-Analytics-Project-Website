@@ -69,8 +69,11 @@ Coupled with the interactivity aspect to choose different options from dropdown 
 
 To faciliate users in their exploration around the application, we have also provided a [user guide](https://grp15-vast-project.netlify.app/userguide) for their reference. 
 
-## Data Used
-The datasets used in this study is taken from the VAST Challenge 2021 Mini Challenges 1 and 3. They are collated in the following tables as shown below. 
+## Data Preparation
+The data provided are a set of historical news reports, data on GAStech employees and email headers from two weeks of internal GAStech company email. They are collated in the following tables as shown below. 
+Detailed steps on preparation of the data can be found at [Data Preparation-Part 1](https://vast-challenge.netlify.app/data_preparation.html) and 
+Detailed steps on preparation of the data can be found at [Data Preparation- Part2](https://isss608-kytan-vast2021.netlify.app/posts/2021-07-07-mc3/#preparation)
+
 
 #HOW TO INSERT TABLE GAHHHH#
 
