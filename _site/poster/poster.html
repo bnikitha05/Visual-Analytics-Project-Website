@@ -21,7 +21,8 @@ Google fonts api stuff
 
 <title>A Visual Investigation of the Kronos Incident</title>
 
-<script src="poster_files/header-attrs-2.8/header-attrs.js"></script>
+<script src="poster_files/header-attrs-2.10/header-attrs.js"></script>
+
 
 
 
@@ -107,9 +108,9 @@ a:active {
 color: #cc0000;
 }
 .poster_body {
--webkit-column-count: 3; /* Chrome, Safari, Opera */
--moz-column-count: 3; /* Firefox */
-column-count: 3;
+-webkit-column-count: 4; /* Chrome, Safari, Opera */
+-moz-column-count: 4; /* Firefox */
+column-count: 4;
 -webkit-column-fill: auto;
 -moz-column-fill: auto;
 column-fill: auto;
@@ -297,7 +298,7 @@ font-size: 20pt;
 <div class='poster_body'>
 <div id="introduction-problem-statement" class="section level1">
 <h1>Introduction / Problem Statement</h1>
-<p>The fictitious Kronos Incident saw the disappearance of several employees from the Tethys-based GASTech in January 2014, as well as multiple events that happened on a specific day 23 Jan 2014. In order to have a better idea on what exactly transpired in this period, we will be applying visual analytical techniques on the datasets through the developed Shiny App on the following <a href="https://fuytio.shinyapps.io/VAST2021-T15-Shiny/">link</a>.</p>
+<p>The fictitious Kronos Incident saw the disappearance of several employees from the Tethys-based GASTech in January 2014, as well as multiple events that happened on a specific day 23 Jan 2014 [1]. In order to have a better idea on what exactly transpired in this period, we will be applying visual analytical techniques on the datasets through the developed Shiny App on the following <a href="https://fuytio.shinyapps.io/VAST2021-T15-Shiny/">link</a>.</p>
 </div>
 <div id="motivation" class="section level1">
 <h1>Motivation</h1>
@@ -321,22 +322,21 @@ font-size: 20pt;
 </ol>
 <p><strong>Text Analytics</strong></p>
 <p><em>Comparison Cloud</em></p>
-<p>Comparison clouds visualise the similarity and differences of important words used by different newsgroups. From them, we are able to get a sense of the sentiments and attitude of these newsgroups. Packages involved are <code>tidytext</code>, <code>tm</code> and <code>wordcloud</code>.</p>
+<p>Comparison clouds visualise the similarity and differences of important words used by different newsgroups [2]. From them, we are able to get a sense of the sentiments and attitude of these newsgroups. Packages involved are <code>tidytext</code>, <code>tm</code> and <code>wordcloud</code>.</p>
 <p><em>Textnet and Text Plot</em></p>
-<p>Textnet is used for clustering of newsgroups. The thickness of the edge connecting any two nodes represents how similar the two nodes are.</p>
+<p>Textnet is used for clustering of newsgroups [3]. The thickness of the edge connecting any two nodes represents how similar the two nodes are.</p>
 <p><img src="img/image02.png" style="width:32.0%" />
 <img src="img/image04.png" style="width:32.0%" />
 <img src="img/image05.png" style="width:32.0%" /></p>
 <p>The color of the node corresponds to the text communities, with the same color indicating a strong relationship between its components. Clusters are then formed to segment the newsgroups with similar characteristics.</p>
 <p>Upon visualizing the components in each cluster, text plot visualizations are conducted to pull out the word co-occurrences between word-pairs, so as to determine the context and content of each clusters.</p>
 <p>Packages used: <code>textnet</code>, <code>ggwordcloud</code>, <code>udpipe</code>, <code>textplot</code>.</p>
-<!-- *Correlation Graphs*  -->
-<!-- not enough space -->
-<!-- Correlation graphs are plotted to determine the correlation between different newsgroups using the Pearson method. From this, we are able to determine which newsgroups might be highly related in terms of their reports of certain events over the years. -->
-<!-- ![](img/image06.png) -->
-<!-- The R packages used are **widyr** and **ggraph**.  -->
+<p><em>Correlation Graphs</em>
+Correlation graphs are plotted to determine the correlation between different newsgroups using the Pearson method. From this, we are able to determine which newsgroups might be highly related in terms of their reports of certain events over the years.</p>
+<p><img src="img/image06.png" /></p>
+<p>The R packages used are <strong>widyr</strong> and <strong>ggraph</strong>.</p>
 <p><em>Term Frequency-Inverse Document Frequency (TF-IDF)</em></p>
-<p>TF-IDF (using <code>tidytext</code> package) measures the importance of a word/word-pair to a document in a collection of documents. It sieves out the most important events occurring during each period from the chatter.</p>
+<p>TF-IDF (using <code>tidytext</code> package) measures the importance of a word/word-pair to a document in a collection of documents [4]. It sieves out the most important events occurring during each period from the chatter.</p>
 <p><strong>Network Graphs</strong></p>
 <p>Using <code>tidygraph</code> and <code>ggraph</code>, the email distribution flow from one person to another is visualised in terms of a network graph. The thickness of the edge implies the number of email passed between two nodes.</p>
 <p><img src="img/image09.png" style="width:48.0%" />
@@ -365,7 +365,12 @@ font-size: 20pt;
 </div>
 <div id="references" class="section level1">
 <h1>References</h1>
-<p>Placeholder</p>
+<p>[1] IEEE 2021. VAST Challenge 2021. IEEE</p>
+<p>[2] Halvey, M.J. and Keane, M.T. 2007. An Assessment of Tag Presentation Techniques. WWW ’07: Proceedings of the 16th international conference on
+World Wide Web. (May 2007), 1313–1314.</p>
+<p>[3] Trigg, R.H. and Weiser, M. 1986. TEXTNET: A Network-Based Approach to Text Handling. ACM Transactions on Information Systems. 11, 1 (Jan.
+1986), 1–23.</p>
+<p>[4] Silge, J. and David, R. 2021. Analysing word and document frequency: tf-idf.</p>
 </div>
 </div>
 </div>

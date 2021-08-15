@@ -9,7 +9,7 @@ author:
     email: karyee.tan.2020@mitb.smu.edu.sg
 affiliation:
   - address: Singapore Management University
-column_numbers: 3
+column_numbers: 4
 logoright_name: https&#58;//vast-challenge.github.io/2021/img/MC3.jpg
 logoleft_name: https&#58;//vast-challenge.github.io/2021/img/MC1.jpg
 output: 
@@ -24,7 +24,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 # Introduction / Problem Statement
 
-The fictitious Kronos Incident saw the disappearance of several employees from the Tethys-based GASTech in January 2014, as well as multiple events that happened on a specific day 23 Jan 2014. In order to have a better idea on what exactly transpired in this period, we will be applying visual analytical techniques on the datasets through the developed Shiny App on the following [link](https://fuytio.shinyapps.io/VAST2021-T15-Shiny/).
+The fictitious Kronos Incident saw the disappearance of several employees from the Tethys-based GASTech in January 2014, as well as multiple events that happened on a specific day 23 Jan 2014 [1]. In order to have a better idea on what exactly transpired in this period, we will be applying visual analytical techniques on the datasets through the developed Shiny App on the following [link](https://fuytio.shinyapps.io/VAST2021-T15-Shiny/).
 
 # Motivation
 
@@ -49,11 +49,11 @@ v) Message Stream Geomap - Shows locations of key messages
 
 *Comparison Cloud*
 
-Comparison clouds visualise the similarity and differences of important words used by different newsgroups. From them, we are able to get a sense of the sentiments and attitude of these newsgroups. Packages involved are `tidytext`, `tm` and `wordcloud`.
+Comparison clouds visualise the similarity and differences of important words used by different newsgroups [2]. From them, we are able to get a sense of the sentiments and attitude of these newsgroups. Packages involved are `tidytext`, `tm` and `wordcloud`.
 
 *Textnet and Text Plot*
 
-Textnet is used for clustering of newsgroups. The thickness of the edge connecting any two nodes represents how similar the two nodes are.
+Textnet is used for clustering of newsgroups [3]. The thickness of the edge connecting any two nodes represents how similar the two nodes are.
 
 ![](img/image02.png){width=32%}
 ![](img/image04.png){width=32%}
@@ -65,16 +65,16 @@ Upon visualizing the components in each cluster, text plot visualizations are co
 
 Packages used: `textnet`, `ggwordcloud`, `udpipe`, `textplot`.
 
-<!-- *Correlation Graphs*  --> <!-- not enough space -->
-<!-- Correlation graphs are plotted to determine the correlation between different newsgroups using the Pearson method. From this, we are able to determine which newsgroups might be highly related in terms of their reports of certain events over the years. -->
+*Correlation Graphs*
+Correlation graphs are plotted to determine the correlation between different newsgroups using the Pearson method. From this, we are able to determine which newsgroups might be highly related in terms of their reports of certain events over the years.
 
-<!-- ![](img/image06.png) -->
+![](img/image06.png)
 
-<!-- The R packages used are **widyr** and **ggraph**.  -->
+The R packages used are **widyr** and **ggraph**.
 
 *Term Frequency-Inverse Document Frequency (TF-IDF)*
 
-TF-IDF (using `tidytext` package) measures the importance of a word/word-pair to a document in a collection of documents. It sieves out the most important events occurring during each period from the chatter.
+TF-IDF (using `tidytext` package) measures the importance of a word/word-pair to a document in a collection of documents [4]. It sieves out the most important events occurring during each period from the chatter.
 
 **Network Graphs**
 
@@ -118,4 +118,12 @@ Further developments to the application can be implemented such that users can u
 
 # References
 
-Placeholder
+[1] IEEE 2021. VAST Challenge 2021. IEEE
+
+[2] Halvey, M.J. and Keane, M.T. 2007. An Assessment of Tag Presentation Techniques. WWW ’07: Proceedings of the 16th international conference on
+World Wide Web. (May 2007), 1313–1314.
+
+[3] Trigg, R.H. and Weiser, M. 1986. TEXTNET: A Network-Based Approach to Text Handling. ACM Transactions on Information Systems. 11, 1 (Jan.
+1986), 1–23.
+
+[4] Silge, J. and David, R. 2021. Analysing word and document frequency: tf-idf.
