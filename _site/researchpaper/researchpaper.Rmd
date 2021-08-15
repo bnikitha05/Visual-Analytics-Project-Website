@@ -36,7 +36,7 @@ This interactive Shiny app aims to provide information on:
 3. Meaningful event reports during the incident day
 4. Risks identified during the incident day and their corresponding locations
 
-# Review and Critics of Past Works
+# Review & Critics of Past Works
 This study is based on the VAST Challenge 2021, which in turn is adapted from a similar VAST Challenge in 2014. Literature review is conducted on the previous VAST Challenge 2014 submissions to look at the analytical techniques used to solve the challenge back then, even though the exact questions were slightly different. While useful, some of the techniques adopted have certain areas that can be further improved. 
 
 ## Text Visualisations
@@ -59,23 +59,91 @@ This application makes use of the open-source R language to conduct visual analy
 * Utilise the embedded Shiny Web Application in R to translate the codes into a webpage for users' ease of understanding  
 * Provides interactivity functions for users to navigate through the app to discover trends and insights 
 
-The design of the application will consists of five major tabs for navigation at the top panel. First, we will have an Introduction page to describe the main purpose of our application. 
+The design of the application will consists of five major tabs for navigation at the top panel.
+
+i) Introduction - Describes the main purpose of our application
+ii) History of GASTech - Sub tabs of Text Analysis and Network Graph to respectively discover insights from the newspaper articles and employee relationships
+iii) Message Stream Exploration -  Explores tweets from different users on the incident day itself to sieve out notable keywords from otherwise spam information
+iv) Risk Level Timeline tab - Further split into Call Centre Reports and Microblog Messages to detect how the public risk levels changed over time on the incident day
+v) Message Stream Geomap - Shows locations where those key messages appeared 
+
+Coupled with the interactivity aspect to choose different options from dropdown boxes to sliders for exploration, the combination of these views gives the user the flexibility and autonomy to navigate through the app to find out more information regarding the Kronos Incident.
+
+To faciliate users in their exploration around the application, we have also provided a [user guide](https://grp15-vast-project.netlify.app/userguide) for their reference. 
 
 ## Data Used
+The datasets used in this study is taken from the VAST Challenge 2021 Mini Challenges 1 and 3. They are collated in the following tables as shown below. 
+
+#HOW TO INSERT TABLE GAHHHH#
+
+These datasets are then loaded into R and further data preparation is conducted to clean these raw data mainly with the tidyverse package.  
 
 ## Analytic Techniques used in Shiny App
+A variety of standard R packages were used to conduct text and visual analysis on the datasets to draw useful insights. The following techniques are used for analysis.
 
 ### Text Analysis
+Our application will build several text analysis outputs to break down large chunks of text data from newspaper articles and tweets into understandable visualisation for users to view: 
+
+**Comparison Cloud**
+
+Comparison clouds are used to visualise the similarity and differences of important words used by different newsgroups. Wordclouds are able to extract out keyword metadata and the frequency of the appearance of a particular word in the articles is determined by the size of the word in the wordcloud. This type of visualisation is useful in the quick pickup of prominent terms to determine the significance of those words. In turn, based on the keywords extracted out, we are also able to get a sense of the sentiments and attitude of these newsgroups regarding their articles about GASTech. 
+
+![](img/image03.png)
+
+Fig. x above shows the comparison cloud between six newsgroups based on the words taken from the published news articles' titles. Our application will have the option for choosing between viewing keywords from "Content of Articles" or "Titles of Articles". Moreover, users can choose the newsgroups they would have to like to compare from a dropdown list of all the newsgroups available. 
+
+The packages used to build this visualisation are **tidytext**, **tm** and **wordcloud**. **Tidytext** is used to convert text into a format that is visualisable with the use of 'unnext_tokens' function. **tm** has built in functions such as 'removeStopwords' to help in the removal of unimportant words. Lastly, the comparison cloud will be developed using the **wordcloud** package. 
+
+**Textnet, Cluster Analysis and Text Plot**
+
+The Textnet approach is used to represent relationships between words. The usage of nodes and links is able to explicit show the relationships between each neighbouring text [cite]. In this case, the first node set is the words found in news articles and the second node set is the newsgroups themselves. That way, a network can be created where newsgroups are connected by their use of the same words, as shown in Fig. X. 
+
+![](img/image02.png)
+
+The node color corresponds to the text communities, with the same colour indicating a strong relationship between its components. In this way, clusters are formed to segment the newsgroups with similar characteristics in terms of the types of words used in the news articles. 
+
+To delve into the cluster segments of different newsgroup, we visualised each segmentation as follows:
+
+![](img/image04.png)
+
+
+Upon visualising the components in each cluster, text plot visualisations are conducted to pull out the word cooccurences between word-pairs, so as to determine the context and content of each clusters. 
+
+![](img/image05.png)
+
+The main R packages used are **textnet**, **ggwordcloud**, **tidytext**, **udpipe** and **textplot**. **Textnet** is currently the only R package available to implement text network techniques in R. To display the word cloud by cluster, **ggwordcloud** was utilised. **Tidytext** helps to convert text into a format that is visualisable with the use of 'unnest_tokens' function. The **udpipe** package provides language-agnostic tokenisation, tagging, lemmatisation and dependency parsing of raw text, which is an essential part in natural language processing (NLP). Lastly, to plot data as a text plot, we will be needing the **textplot** package. 
+
+**Correlation Graphs** 
+Correlation graphs are plotted to determine the correlation between different newsgroups. From this, we are able to determine which newsgroups might be highly related in terms of their reports of certain events over the years. The correlation values are obtained using the widely used Pearson method. 
+
+![](img/image06.png)
+
+
+The R packages used are **widyr** and **ggraph**. **Widyr** is able to cast a tidy dataset into a wide matrix, performs an operation such as computing the correlation on it, and then re-tidies the result. 'pairwise_cor' function is found in this package. **ggraph** is then used to plot the relationship between different newsgroups based on their correlation values. 
+
+**TF-IDF**
+As mentioned in the **Review & Critics of Past Works** section, word cloud alone might not be very useful to visualise a collection of microblog message due to its consistency issue. As such, TF-IDF approach is more helpful when trying to pick out specific key events/topics of relevance. 
+
 
 ### Network Graphs
 
+**Relationships of GASTech Employees**
+
+**Email Flow**
+
+**Target Employee**
+
+
 ### Geospatial mapping
+
 
 # Application Insights
 Nullam semper imperdiet orci, at lacinia est aliquet et. Sed justo nibh, aliquet et velit at, pharetra consequat velit. Nullam nec ligula sagittis, adipiscing nisl sed, varius massa. Mauris quam ante, aliquet a nunc et, faucibus imperdiet libero. Suspendisse odio tortor, bibendum vel semper sit amet, euismod ac ante. Nunc nec dignissim turpis, ac blandit massa. Donec auctor massa ac vestibulum aliquam. Fusce auctor dictum lobortis. Vivamus tortor augue, convallis quis augue sit amet, laoreet tristique quam. Donec id volutpat orci. Suspendisse at mi vel elit accumsan porta ac ut diam. Nulla ut dapibus quam.
 
 # Conclusion and Future Work
-Duis nec purus sed neque porttitor tincidunt vitae quis augue. Donec porttitor aliquam ante, nec convallis nisl ornare eu. Morbi ut purus et justo commodo dignissim et nec nisl. Donec imperdiet tellus dolor, vel dignissim risus venenatis eu. Aliquam tempor imperdiet massa, nec fermentum tellus sollicitudin vulputate. Integer posuere porttitor pharetra. Praesent vehicula elementum diam a suscipit. Morbi viverra velit eget placerat pellentesque. Nunc congue augue non nisi ultrices tempor.
+The study 
+
+Further developments to the application can be implemented such that the application is able to take out other text data such as text corpus  
 
 # References
 
