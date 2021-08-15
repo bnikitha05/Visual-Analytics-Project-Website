@@ -11,9 +11,7 @@ author:
     email: karyee.tan.2020@mitb.smu.edu.sg
     affiliation: Singapore Management University
 abstract: |
-  This is the abstract.
-
-  It consists of two paragraphs.
+  Investigation of crimes often is dealt with vast amount of data that has to be manually viewed to obtain clues and evidence. An optimal visualization of data is helpful in reducing the manual work and providng more accurate insights and patterns of the crime. This project aims to apply visual analytics into investigation of the kidnapping of several GAStech company employees. Using datasets that capture the newspaper articles, social media data and the information of the employees, a visualization application is created using R Shiny as the platform. The insights derived can help understand metrics such as relation of employess within the company, the reputaion of the company in Kronos and the unfolding of events on the day of incident.
 bibliography: sigproc.bib
 csl: acm-sig-proceedings.csl
 output: rticles::acm_article
@@ -95,21 +93,20 @@ Fig. x above shows the comparison cloud between six newsgroups based on the word
 
 The packages used to build this visualisation are **tidytext**, **tm** and **wordcloud**. **Tidytext** is used to convert text into a format that is visualisable with the use of 'unnext_tokens' function. **tm** has built in functions such as 'removeStopwords' to help in the removal of unimportant words. Lastly, the comparison cloud will be developed using the **wordcloud** package. 
 
-**Textnet, Cluster Analysis and Text Plot**
+**Textnet and Text Plot**
 
-The Textnet approach is used to represent relationships between words. The usage of nodes and links is able to explicit show the relationships between each neighbouring text [cite]. In this case, the first node set is the words found in news articles and the second node set is the newsgroups themselves. That way, a network can be created where newsgroups are connected by their use of the same words, as shown in Fig. X. 
+Textnet is used for clustering of newsgroups. To represent the data in cluster format, the data has to be converted to two columns. The first column would be the set of words found in news articles and the second is the name of newsgroups themselves. That way, a network can be created where newsgroups are connected by their use of the same words, as shown in Fig. X. The thickness of the edge connecting any two nodes represents how similar the two nodes are.
 
 ![](img/image02.png)
 
+The color of the node corresponds to the text communities, with the same color indicating a strong relationship between its components. In this way, clusters are formed to segment the newsgroups with similar characteristics in terms of the types of words used in the news articles. 
 
-The node color corresponds to the text communities, with the same colour indicating a strong relationship between its components. In this way, clusters are formed to segment the newsgroups with similar characteristics in terms of the types of words used in the news articles. 
-
-To delve into the cluster segments of different newsgroup, we visualised each segmentation as follows:
+To delve into the cluster segments of different newsgroup, we visualize each segmentation as follows:
 
 ![](img/image04.png)
 
 
-Upon visualising the components in each cluster, text plot visualisations are conducted to pull out the word cooccurences between word-pairs, so as to determine the context and content of each clusters. 
+Upon visualizing the components in each cluster, text plot visualizations are conducted to pull out the word co-occurrences between word-pairs, so as to determine the context and content of each clusters. 
 
 ![](img/image05.png)
 

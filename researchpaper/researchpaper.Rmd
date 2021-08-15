@@ -99,12 +99,7 @@ Textnet is used for clustering of newsgroups. To represent the data in cluster f
 
 ![](img/image02.png)
 
-<<<<<<< HEAD
-The node color corresponds to the text communities, with the same color indicating a strong relationship between its components. In this way, clusters are formed to segment the newsgroups with similar characteristics in terms of the types of words used in the news articles. 
-=======
-
-The node color corresponds to the text communities, with the same colour indicating a strong relationship between its components. In this way, clusters are formed to segment the newsgroups with similar characteristics in terms of the types of words used in the news articles. 
->>>>>>> 55128c1e2b8505f7ba492d07e81bd19206ab1ed8
+The color of the node corresponds to the text communities, with the same color indicating a strong relationship between its components. In this way, clusters are formed to segment the newsgroups with similar characteristics in terms of the types of words used in the news articles. 
 
 To delve into the cluster segments of different newsgroup, we visualize each segmentation as follows:
 
@@ -126,12 +121,7 @@ Correlation graphs are plotted to determine the correlation between different ne
 
 The R packages used are **widyr** and **ggraph**. **Widyr** is able to cast a tidy dataset into a wide matrix, performs an operation such as computing the correlation on it, and then re-tidies the result. 'pairwise_cor' function is found in this package. **ggraph** is then used to plot the relationship between different newsgroups based on their correlation values. 
 
-<<<<<<< HEAD
-**TF-IDF**
-As mentioned in the **Review & Critics of Past Works** section, word cloud alone might not be very useful to visualize a collection of 'microblog' messages due to its consistency issue. As such, TF-IDF approach is more helpful when trying to pick out specific key events/topics of relevance. 
-=======
 **Term Frequency-Inverse Document Frequency (TF-IDF)**
->>>>>>> 55128c1e2b8505f7ba492d07e81bd19206ab1ed8
 
 As mentioned in the **Review & Critics of Past Works** section, word cloud alone might not be very useful to visualise a collection of microblog message due to its consistency issue. As such, TF-IDF approach is more helpful when trying to pick out specific key events/topics of relevance. This approach aims to measure the importance of a word is to a document in a collection/corpus of documents, by including the inverse document frequency (IDF) to balance the term frequency (TF) used in wordclouds. Hence, we will view each hour of tweets as a document and all 5 hours of the dataset as the corpus, to determine the key events that dominate each hour. With that, TF-IDF can be a powerful heuristic to sieve out the most important events occurring during each period from the chatter spread throughout the dataset.  
 
