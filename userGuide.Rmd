@@ -10,7 +10,6 @@ output:
 knitr::opts_chunk$set(echo = TRUE, warning=FALSE,message=FALSE)
 ```
 
-Download User Guide [here]()
 
 ### User Guide: Viz-Investigation of Kronos Incident
 

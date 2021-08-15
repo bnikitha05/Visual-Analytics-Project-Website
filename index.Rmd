@@ -1,7 +1,7 @@
 ---
-title: "Visual Detectives #suggest other names"
+title: "A Visual Investigation of the Kronos Incident"
 description: |
-  Does visual analytics help in investigations? Read on to find out! :D #suggest description
+  Do you want to become a detective? Read on about our project to understand how visual analytics can help in investigations and explore our application to become one!
 site: distill::distill_website
 ---
 
@@ -10,19 +10,18 @@ knitr::opts_chunk$set(echo = FALSE, warning=FALSE,message=FALSE)
 
 ```
 
-Welcome to the home page of Group-15 project website on **VAST Challenge Mini Challenge 1 and 3**. This project is part of the coursework of Visual Analytics and Applications, taught by Professor [Dr. Kam Tin Seong](https://www.smu.edu.sg/faculty/profile/9618/KAM-Tin-Seong) at Singapore Management University.
+Welcome to the home page of Group-15 project website. This project is part of the coursework of Visual Analytics and Applications, taught by Professor [Dr. Kam Tin Seong](https://www.smu.edu.sg/faculty/profile/9618/KAM-Tin-Seong) at Singapore Management University.
 
-The website covers the work carried out to develop interactive visualizations to solve the VAST challenge. The report also covers the previous work conducted in this challenge. A full step user guide is also provided for easy replication. For readers wishing to get more context quickly on the application, you may refer to the Poster tab. 
+The website covers the work carried out to develop interactive visualizations using the data from the **VAST Challenge 2021**. It consists of the R shiny application, research paper and poster. The report also covers the previous work conducted in this challenge. A full step user guide is also provided for easy usage of the application. For readers wishing to get more context quickly on the application, you may refer to the Poster tab.
 
-#### explain about the website in detail in the above para
 
 **AUTHORS:**
 
-*   [Connie Xia Yi Jing]()  # put in linkedin
+*   [Connie Xia Yi Jing](https://www.linkedin.com/in/connie-xia)
 
 *   [Nikitha Banda](https://www.linkedin.com/in/banda-nikitha)
 
-*   [Tan Kar Yee]() # put in linkedin
+*   [Tan Kar Yee](https://www.linkedin.com/in/kar-yee-tan-22747954)
 
 
 **AFFILIATION:** School of Computing and Information Systems, Singapore Management University
