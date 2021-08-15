@@ -11,3 +11,5 @@ knitr::opts_chunk$set(echo = TRUE, warning=FALSE,message=FALSE)
 ```
 
 Click [here](researchpaper/researchpaper.pdf) for the Research Paper.
+
+![](img/rp1.png)
