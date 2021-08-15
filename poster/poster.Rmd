@@ -49,9 +49,7 @@ v) Message Stream Geomap - Shows locations of key messages
 
 *Comparison Cloud*
 
-Comparison clouds visualise the similarity and differences of important words used by different newsgroups. From them, we are able to get a sense of the sentiments and attitude of these newsgroups. Packages involved are **tidytext**, **tm** and **wordcloud**.
-
-![](img/image03.png){width=80%}
+Comparison clouds visualise the similarity and differences of important words used by different newsgroups. From them, we are able to get a sense of the sentiments and attitude of these newsgroups. Packages involved are `tidytext`, `tm` and `wordcloud`.
 
 *Textnet and Text Plot*
 
@@ -65,7 +63,7 @@ The color of the node corresponds to the text communities, with the same color i
 
 Upon visualizing the components in each cluster, text plot visualizations are conducted to pull out the word co-occurrences between word-pairs, so as to determine the context and content of each clusters. 
 
-Packages used are **textnet**, **ggwordcloud**, **tidytext**, **udpipe** and **textplot**.
+Packages used: `textnet`, `ggwordcloud`, `udpipe`, `textplot`.
 
 <!-- *Correlation Graphs*  --> <!-- not enough space -->
 <!-- Correlation graphs are plotted to determine the correlation between different newsgroups using the Pearson method. From this, we are able to determine which newsgroups might be highly related in terms of their reports of certain events over the years. -->
@@ -76,13 +74,11 @@ Packages used are **textnet**, **ggwordcloud**, **tidytext**, **udpipe** and **t
 
 *Term Frequency-Inverse Document Frequency (TF-IDF)*
 
-TF-IDF (using **tidytext** package) measures the importance of a word/word-pair to a document in a collection of documents. It sieves out the most important events occurring during each period from the chatter.
+TF-IDF (using `tidytext` package) measures the importance of a word/word-pair to a document in a collection of documents. It sieves out the most important events occurring during each period from the chatter.
 
-![](img/image07.png){width=80%}
+**Network Graphs**
 
-**Network Graphs (using tidygraph and ggraph)**
-
-The email distribution flow from one person to another is visualised in terms of a network graph. The thickness of the edge implies the number of email passed between two nodes.
+Using `tidygraph` and `ggraph`, the email distribution flow from one person to another is visualised in terms of a network graph. The thickness of the edge implies the number of email passed between two nodes.
 
 ![](img/image09.png){width=48%}
 ![](img/image10.png){width=48%}
@@ -91,17 +87,30 @@ The email relationships of the employees are split into work-related and non-wor
 
 **Timeline Charts**
 
-Separate timeline charts are plotted using the **ggplot** package to look into the frequency of the microblog and call center reports over time. Through that, we aim to discover the risk levels indicated by the charts. 
-
-A data table using the **DT** package is also linked to the charts to show the exact messages that are received.
+Separate timeline charts are plotted using the `ggplot2` and `DT` package to look into the the microblog and call center reports. Through that, we aim to discover the risk levels over the incident time. 
 
 **Geospatial Mapping**
 
-Interactive geospatial mapping visualisation is performed using the **tmap** package so as to track the locations where those microblogs tweets and call center reports originate from. The interactive view mode allow layers to be removed or added, as well as show the exact messages by clicking on the points.
+Interactive geospatial visualisation is performed using the `tmap` package. The interactive view mode allow layers to be removed or added, as well as show the exact messages by clicking on the points.
 
-# Results
+# Results / Key Findings
 
-Placeholder
+**Content of Newsgroups (using Comparison Cloud)**
+
+![](img/image03.png){width=60%}
+
+**Context of Clusters**
+
+![](img/image12.png){width=48%}
+![](img/image13.png){width=48%}
+
+**Key Topics from Microblog Analysis (using bigram TF-IDF)**
+
+![](img/image07.png){width=70%}
+
+**Map of Key Event Locations with Geolocation**
+
+![](img/image11.png){width=70%}
 
 # Future Work
 
