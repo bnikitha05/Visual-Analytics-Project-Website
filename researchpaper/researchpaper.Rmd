@@ -11,7 +11,7 @@ author:
     email: karyee.tan.2020@mitb.smu.edu.sg
     affiliation: Singapore Management University
 abstract: |
-  Investigation of crimes often is dealt with vast amount of data that has to be manually viewed to obtain clues and evidence. An optimal visualization of data is helpful in reducing the manual work and providng more accurate insights and patterns of the crime. This project aims to apply visual analytics into investigation of the kidnapping of several GAStech company employees. Using datasets that capture the newspaper articles, social media data and the information of the employees, a visualization application is created using R Shiny as the platform. The insights derived can help understand metrics such as relation of employess within the company, the reputaion of the company in Kronos and the unfolding of events on the day of incident.
+  Investigation of crimes often is dealt with vast amount of data that has to be manually viewed to obtain clues and evidence. An optimal visualization of data is helpful in reducing the manual work and providng more accurate insights and patterns of the crime. This project aims to apply visual analytics into investigation of the kidnapping of several GAStech company employees. Using datasets that capture the newspaper articles, social media data and the information of the employees, a visualization application is created using R Shiny as the platform. The insights derived can help draw patterns and obtain clues on metrics such as relation of employess within the company, the reputaion of the company in Kronos and the unfolding of events on the day of incident.
 bibliography: sigproc.bib
 csl: acm-sig-proceedings.csl
 output: rticles::acm_article
