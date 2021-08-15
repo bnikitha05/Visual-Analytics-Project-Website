@@ -53,17 +53,17 @@ Comparison clouds visualise the similarity and differences of important words us
 
 ![](img/image03.png){width=80%}
 
-**Textnet and Text Plot**
+*Textnet and Text Plot*
 
 Textnet is used for clustering of newsgroups. The thickness of the edge connecting any two nodes represents how similar the two nodes are.
-
-The color of the node corresponds to the text communities, with the same color indicating a strong relationship between its components. In this way, clusters are formed to segment the newsgroups with similar characteristics in terms of the types of words used in the news articles. 
-
-Upon visualizing the components in each cluster, text plot visualizations are conducted to pull out the word co-occurrences between word-pairs, so as to determine the context and content of each clusters. 
 
 ![](img/image02.png){width=32%}
 ![](img/image04.png){width=32%}
 ![](img/image05.png){width=32%}
+
+The color of the node corresponds to the text communities, with the same color indicating a strong relationship between its components. Clusters are then formed to segment the newsgroups with similar characteristics. 
+
+Upon visualizing the components in each cluster, text plot visualizations are conducted to pull out the word co-occurrences between word-pairs, so as to determine the context and content of each clusters. 
 
 Packages used are **textnet**, **ggwordcloud**, **tidytext**, **udpipe** and **textplot**.
 
@@ -76,9 +76,9 @@ Packages used are **textnet**, **ggwordcloud**, **tidytext**, **udpipe** and **t
 
 *Term Frequency-Inverse Document Frequency (TF-IDF)*
 
-The TF-IDF approach (using **tidytext**) aims to measure the importance of a word/word-pair to a document in a collection/corpus of documents. By viewing each hour of tweets as a document and all 5 hours of the dataset as the corpus, it helps us to sieve out the most important events occurring during each period from the chatter spread throughout the dataset.
+TF-IDF (using **tidytext** package) measures the importance of a word/word-pair to a document in a collection of documents. It sieves out the most important events occurring during each period from the chatter.
 
-![](img/image07.png)
+![](img/image07.png){width=80%}
 
 **Network Graphs (using tidygraph and ggraph)**
 
@@ -96,6 +96,7 @@ Separate timeline charts are plotted using the **ggplot** package to look into t
 A data table using the **DT** package is also linked to the charts to show the exact messages that are received.
 
 **Geospatial Mapping**
+
 Interactive geospatial mapping visualisation is performed using the **tmap** package so as to track the locations where those microblogs tweets and call center reports originate from. The interactive view mode allow layers to be removed or added, as well as show the exact messages by clicking on the points.
 
 # Results
