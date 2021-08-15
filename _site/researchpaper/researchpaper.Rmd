@@ -33,15 +33,19 @@ This interactive Shiny application aims to provide information on:
 4. Risks identified during the incident day and their corresponding locations
 
 # Review & Critics of Past Works
-This study is based on the VAST Challenge 2021, which in turn is adapted from a similar VAST Challenge in 2014. Literature review is conducted on the previous VAST Challenge 2014 submissions to look at the analytical techniques used to solve the challenge back then, even though the exact questions were slightly different. While useful, some of the techniques adopted have certain areas that can be further improved. 
+This study is based on the VAST Challenge 2021, which in turn is adapted from a similar VAST Challenge in 2014 (IEEE 2021). Literature review is conducted on the previous VAST Challenge 2014 submissions to look at the analytical techniques used to solve the challenge back then, even though the exact questions were slightly different. While useful, some of the techniques adopted have certain areas that can be further improved. 
 
 ## Text Visualisations
-A study conducted by Peking University (2014) on Mini Challenge 1 presented their text analysis in a form of a timeline to showcase different events occurring between January 20 – 21. Articles in the form of text boxes were layered over the timeline for comparison. While it showcased all the news reporting of different events occurring over the two-day time period, it might be difficult for a user to interpret the main concepts of those articles. Hence, a better alternative might be to utilise a word cloud function to pull out key words of the articles for view and interpretation. In addition, interactive comparisons of different newsgroups can also be performed, giving the user flexibility to choose the newsgroups they are interested in to view and evaluate.
+A study conducted by Peking University (Wang, C. et al. 2014) on Mini Challenge 1 presented their text analysis in a form of a timeline to showcase different events occurring between January 20 – 21. Articles in the form of text boxes were layered over the timeline for comparison. While it showcased all the news reporting of different events occurring over the two-day time period, it might be difficult for a user to interpret the main concepts of those articles. Hence, a better alternative might be to utilise a word cloud function to pull out key words of the articles for view and interpretation. In addition, interactive comparisons of different newsgroups can also be performed, giving the user flexibility to choose the newsgroups they are interested in to view and evaluate.
 
-While word clouds are generally useful in identifying topic content for a broad overview as shown in the study performed by Tianjing University (2014) on Mini Challenge 3, their results might be less consistent and harder to make sense of due to the presence of spam data. Hence, to be able to distinguish important events from typical chatter, TF-IDF would be a better statistical tool to use. 
+While word clouds are generally useful in identifying topic content for a broad overview as shown in the study performed by Tianjing University (Yang S. and Jiang, X. 2014) on Mini Challenge 3, their results might be less consistent and harder to make sense of due to the presence of spam data. Hence, to be able to distinguish important events from typical chatter, TF-IDF would be a better statistical tool to use. 
 
 ## Network Graphs
+<<<<<<< HEAD
+Network graphs are a good visualisation tool to establish the relationships between different parties of interest. By and large, network graphs would be densely populated with nodes and edges if there are numerous parties involved. Yet, this brings about an issue of overcrowding and overlaps of texts, making the entire visualisation looks cluttered (Wang, C. et al. 2014).
+=======
 Network graphs are a good visualization tool to establish the relationships between different parties of interest. By and large, network graphs would be densely populated with nodes and edges if there are numerous parties involved. Yet, this brings about an issue of overcrowding and overlaps of texts, making the entire visualization looks cluttered.
+>>>>>>> 14d4b20d2d10c05d7eca5a032d7dead935dba259
 
 One way to overcome this issue of cluttering will be to divide the network graph into sub graphs. When the graph is divided, the density of the visualization will be reduced, with the readability enhanced. 
 
@@ -88,13 +92,17 @@ Our application will build several text analysis outputs to break down large chu
 
 **Comparison Cloud**
 
+<<<<<<< HEAD
+Comparison clouds are used to visualise the similarity and differences of important words used by different newsgroups. Wordclouds are able to extract out keyword metadata and the frequency of the appearance of a particular word in the articles is determined by the size of the word in the wordcloud (Halvey M.J. and Keane, M.T. 2007). This type of visualisation is useful in the quick pickup of prominent terms to determine the significance of those words. In turn, based on the keywords extracted out, we are also able to get a sense of the sentiments and attitude of these newsgroups regarding their articles about GASTech. Our application will have the option for choosing between viewing keywords from "Content of Articles" or "Titles of Articles". Moreover, users can choose the newsgroups they would have to like to compare from a dropdown list of all the newsgroups available. 
+=======
 Comparison clouds are used to visualize the similarity and differences of important words used by different newsgroups. A comparison cloud was preferred over wordcloud because wordcloud tend to extract out keyword metadata and the frequency of the appearance of a particular word in only one newsgroup and it is not possible to compare various newsgroups. Visualization of comparison clouds is useful in the quick pickup of prominent terms to determine the significance of those words. In turn, based on the keywords extracted out, we are also able to get a sense of the sentiments and attitude of these newsgroups regarding their articles about GASTech. Our application will have the option for choosing between viewing keywords from "Content of Articles" or "Titles of Articles". Moreover, users can choose the newsgroups they would have to like to compare from a dropdown list of all the newsgroups available. 
+>>>>>>> 14d4b20d2d10c05d7eca5a032d7dead935dba259
 
 The packages used to build this visualization are **tidytext**, **tm** and **wordcloud**. **Tidytext** is used to convert text into a format that is visualisable with the use of 'unnext_tokens' function. **tm** has built in functions such as 'removeStopwords' to help in the removal of unimportant words. Lastly, the comparison cloud will be developed using the **wordcloud** package. 
 
 **Textnet and Text Plot**
 
-Textnet is used for clustering of newsgroups. To represent the data in cluster format, the data has to be converted to two columns. The first column would be the set of words found in news articles and the second is the name of newsgroups themselves. That way, a network can be created where newsgroups are connected by their use of the same words. The thickness of the edge connecting any two nodes represents how similar the two nodes are.
+Textnet can be used to help in structuring text data, by showcasing relationships between neighbouring text data of relevance (Trigg, R.H. and Weiser, M. 1986). Hence, textnet can be used for clustering of newsgroups. To represent the data in cluster format, the data has to be converted to two columns. The first column would be the set of words found in news articles and the second is the name of newsgroups themselves. That way, a network can be created where newsgroups are connected by their use of the same words. The thickness of the edge connecting any two nodes represents how similar the two nodes are.
 
 ![](img/image02.png)
 *Fig, 1 Relationship between different Newsgroups*
@@ -115,13 +123,21 @@ The main R packages used are **textnet**, **ggwordcloud**, **tidytext**, **udpip
 
 **Correlation Graphs** 
 
+<<<<<<< HEAD
+Correlation graphs are plotted to determine the correlation between different newsgroups. From this, we are able to determine which newsgroups might be highly related in terms of their reports of certain events over the years. The correlation values are obtained using the widely used Pearson method (Glen, S.).
+=======
 Correlation graphs are plotted to determine the correlation between different newsgroups. From this, we are able to determine how strongly or weakly the newsgroups are related to each other. The correlation values are obtained using the widely used Pearson method.
+>>>>>>> 14d4b20d2d10c05d7eca5a032d7dead935dba259
 
 The R packages used are **widyr** and **ggraph**. **Widyr** is able to cast a tidy dataset into a wide matrix, performs an operation such as computing the correlation on it, and then re-tidies the result. 'pairwise_cor' function is found in this package. **ggraph** is then used to plot the relationship between different newsgroups based on their correlation values. 
 
 **Term Frequency-Inverse Document Frequency (TF-IDF)**
 
+<<<<<<< HEAD
+As mentioned in the **Review & Critics of Past Works** section, word cloud alone might not be very useful to visualise a collection of microblog message due to its consistency issue. As such, TF-IDF approach is more helpful when trying to pick out specific key events/topics of relevance. This approach aims to measure the importance of a word is to a document in a collection/corpus of documents, by including the inverse document frequency (IDF) to balance the term frequency (TF) used in wordclouds (Silge, J. and Robinson, D. 2021). Hence, we will view each hour of tweets as a document and all 5 hours of the dataset as the corpus, to determine the key events that dominate each hour. With that, TF-IDF can be a powerful heuristic to sieve out the most important events occurring during each period from the chatter spread throughout the dataset. Both unigrams and bigrams are plotted to look at both the singular word and word-pairs respectively. 
+=======
 As mentioned in the **Review & Critics of Past Works** section, word cloud alone might not be very useful to visualize a collection of microblog message due to its consistency issue. As such, TF-IDF approach is more helpful when trying to pick out specific key events/topics of relevance. This approach aims to measure the importance of a word is to a document in a collection/corpus of documents, by including the inverse document frequency (IDF) to balance the term frequency (TF) used in wordclouds. Hence, we will view each hour of tweets as a document and all 5 hours of the dataset as the corpus, to determine the key events that dominate each hour. With that, TF-IDF can be a powerful heuristic to sieve out the most important events occurring during each period from the chatter spread throughout the dataset. Both unigrams and bigrams are plotted to look at both the singular word and word-pairs respectively. 
+>>>>>>> 14d4b20d2d10c05d7eca5a032d7dead935dba259
 
 The relevant R package used is **tidytext**, where the 'bind_tf_idf' function helps to compute and bind the term frequency, inverse document frequency and td-idf of a tidy text dataset to the dataset. 
 
@@ -257,31 +273,96 @@ Further developments to the application can be implemented such that users can u
 
 ---
 references:
-- id: meier2012
-  title: Professinal Android 4 Application Development
-  author: 
-  - family: Meier
-    given: Reto
-  type: book
-  publisher: John Wiley & Sons, Inc.
+- id: vast2021
+  title: "VAST Challenge 2021"
+  author: IEEE
+  type: website
+  publisher: IEEE
+  URL: 'https://vast-challenge.github.io/2021/'
   issued:
-    year: 2012
-    month: 5
-- id: fenner2012a
-  title: One-click science marketing
+    year: 2021
+- id: pekingvast2014
+  title: "VAST Challenge 2014 Mini Challenge 1"
+  author: 
+  - family: Wang
+    given: Chenglong
+  - family: Cheng
+    given: Siming
+  - family: Miao
+    given: Zhengjie
+  - family: Yuan
+    given: Xiaoru
+  type: website
+  publisher: Peking University
+  URL: 'https://www.cs.umd.edu/hcil/varepository/VAST%20Challenge%202014/challenges/MC1%20-%20Disappearance%20at%20GASTech/entries/Peking%20University/'
+  issued:
+    year: 2014
+- id: tianvast2014
+  title: "VAST Challenge 2014 Mini Challenge 3"
+  author: 
+  - family: Yang
+    given: Siqi
+  - family: Jiang
+    given: Xinyi
+  type: website
+  publisher: Tianjing University
+  URL: 'https://www.cs.umd.edu/hcil/varepository/VAST%20Challenge%202014/challenges/MC3%20-%20Real-Time,%20Streaming%20Social%20Media/entries/Tianjin%20University/'
+  issued:
+    year: 2014
+- id: halveykeane
+  title: "An Assessment of Tag Presentation Techniques"
   author:
-  - family: Fenner
-    given: Martin
-  container-title: Nature Materials
-  volume: 11
-  URL: 'https://doi.org/10.1038/nmat3283'
-  DOI: 10.1038/nmat3283
-  issue: 4
-  publisher: Nature Publishing Group
-  page: 261-263
+  - family: "Halvey"
+    given: "Martin J."
+  - family: "Keane"
+    given: "Mark T."
+  container-title: "WWW '07: Proceedings of the 16th international conference on World Wide Web"
+  URL: 'https://doi.org/10.1145/1242572.1242826'
+  DOI: 10.1145/1242572.1242826
+  publisher: Association for Computing Machinery
+  page: 1313-1314
   type: article-journal
   issued:
-    year: 2012
-    month: 3
+    year: 2007
+    month: 5
+- id: triggweiser
+  title: "TEXTNET: A Network-Based Approach to Text Handling"
+  author:
+  - family: "Trigg"
+    given: "Randall H."
+  - family: Weiser
+    given: Mark
+  container-title: "ACM Transactions on Information Systems"
+  Volume: 11
+  URL: 'https://doi.org/10.1145/5401.5402'
+  DOI: 10.1145/5401.5402
+  issue: 1
+  publisher: Association for Computing Machinery
+  page: 1-23
+  type: article-journal
+  issued:
+    year: 1986
+    month: 1
+- id: glen
+  title: "Correlation Coefficient: Simple Definition, Formula, Easy Steps"
+  author: 
+  - family: Glen
+    given: Stephanie
+  type: website
+  URL: 'https://www.statisticshowto.com/probability-and-statistics/correlation-coefficient-formula/'
+  publisher: Statistics How To
+- id: silge
+  title: Analysing word and document frequency: tf-idf
+  author:
+  - family: Silge
+    given: Julia
+  - family: David
+    given: Robinson
+  container-title: "Text Mining with R: A Tidy Approach"
+  URL: 'https://www.tidytextmining.com/tfidf.html'
+  type: book
+  issued:
+    year: 2021
+    month: 6
 ...
 
