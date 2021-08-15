@@ -2030,7 +2030,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </script>
 
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
+  <script src="site_libs/header-attrs-2.8/header-attrs.js"></script>
   <script src="site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2093,6 +2093,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <li><a href="#text-analysis">2.1 Text Analysis</a></li>
 <li><a href="#network-graph">2.2 Network Graph</a></li>
 <li><a href="#on-the-day-of-incident">3 On the Day of Incident</a></li>
+<li><a href="#message-stream-exploration">3.1 Message Stream Exploration</a></li>
+<li><a href="#risk-level-timeline">3.2 Risk level timeline</a></li>
 </ul>
 </nav>
 </div>
@@ -2153,6 +2155,45 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <p>[1] Select the employee from the dropdown list of all employees in GAStech company.</p>
 <p>[2] Select the identification of the nodes.</p>
 <h3 id="on-the-day-of-incident">3 On the Day of Incident</h3>
+<p>This sub section of the application is to investigate the events that unfolded in Abila on 23 January 2014, by doing analysis on the message stream of microblog records and call centre reports for this period of 1700H to 2135H.</p>
+<h3 id="message-stream-exploration">3.1 Message Stream Exploration</h3>
+<p>The first part is to look at some basic exploration of the message stream and its content, and in particular to distinguish and extract meaningful event information from typical chatter.</p>
+<h4 id="author-spam">3.1.1 Author Spam</h4>
+<p>This tab looks at the number of messages that different microblog authors produce. By focusing on the top few, we can see if some authors are producing spam that will interfere with the downstream sense-making of the data.</p>
+<p><img src="img/mc3/Slide1.JPG" /></p>
+<p>The graph on top shows the authors and their messages over time, grouped by each hour.</p>
+<p>[1] Based on the graph, select any author to explore the content of their messages.</p>
+<h4 id="word-cloud">3.1.2 Word Cloud</h4>
+<p>We make use of simple wordclouds to get an overview of the kind of topics and keywords that are most often discussed in the message stream.</p>
+<p><img src="img/mc3/Slide2.JPG" /></p>
+<p>[1] Select the minimum wordcount / term frequency for a word to be included in the the wordcloud. If we want less words in the wordcloud, choose a higher value; if we want more words, choose a lower value.</p>
+<p>[2] Select the size of the wordcloud.</p>
+<p>[3] Select the wordcloud type. The default one uses a single wordcloud for the whole period. We can also choose the multiple wordcloud, which provides one wordcloud for each hour.</p>
+<p><img src="img/mc3/Slide3.JPG" /></p>
+<h4 id="tf-idf-keywords">3.1.3 TF-IDF Keywords</h4>
+<p>The third part utilizes the TF-IDF heuristic, which measures how important a word is to a document in a collection/corpus of documents, by including the inverse document frequency (IDF) to balance the term frequency (TF) used in the wordcloud. Therefore, it allows us to sieve out the most important events happening in each period from the chatter spread throughout the dataset.</p>
+<p><img src="img/mc3/Slide4.JPG" /></p>
+<p>[1] Select the plot type. The default one calculates tf-idf for bigrams (word pairs), which provides more context and is thus easier to interpret for the user. The user can also choose to see the unigram (single words) tf-idf plot, as show below.</p>
+<p><img src="img/mc3/Slide5.JPG" /></p>
+<p>[2] Change the top N bigrams/unigrams by tf-idf value to be shown.</p>
+<p>[3] Choose whether to show the data table of the message stream. This is useful if we need more context surrounding specific keywords, which can be done by searching for these keywords in the message stream. An example is shown below with the “alexandrias ithakis” keywords (which is a cross junction of two roads, Alexandrias and Ithakis).</p>
+<p><img src="img/mc3/Slide6.JPG" /></p>
+<h3 id="risk-level-timeline">3.2 Risk level timeline</h3>
+<p>This section looks at how the level of the risk to the public evolves over the course of the incident unfolding, and uses various measures to explore this risk.</p>
+<h4 id="by-call-centre-reports">3.2.1 By Call Centre Reports</h4>
+<p>This tab looks at the call centre reports, which are organized, low in numbers and have a high signal-to-noise ratio (compared to microblog messages).</p>
+<p><img src="img/mc3/Slide7.JPG" /></p>
+<p>[1] Select the time intervals to bin the messages. This allows flexibility to group the messages into different desired time intervals, to explore the timeline as desired. An example is shown using 5 min intervals instead of the default 15 min interval.</p>
+<p><img src="img/mc3/Slide8.JPG" /></p>
+<p>[2] Choose whether to only include call centre reports that are longer in length. This is because long messages tend to be more important incidents, due to the need to report more incident details. An example is shown below when including all messages, which tends to introduce more minor reports to the timeline.</p>
+<p><img src="img/mc3/Slide9.JPG" /></p>
+<p>[3] Choose whether to include the data table, to see the details of the reports.</p>
+<h4 id="by-microblog-messages">3.2.2 By Microblog Messages</h4>
+<p>This tab looks at the microblog messages. While more messy and noisy, they contain significant information like crowd levels and public reactions to add to the risk level evaluation. We use various quantitative estimates to assess risk.</p>
+<p><img src="img/mc3/Slide10.jpg" /></p>
+<p>[1]</p>
+<p>[2]</p>
+<p>[3]</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
