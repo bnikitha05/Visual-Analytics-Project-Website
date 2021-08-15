@@ -10,4 +10,4 @@ output:
 knitr::opts_chunk$set(echo = TRUE, warning=FALSE,message=FALSE)
 ```
 
-#### poster in the required format
+Click [here](poster/poster.html) for the Poster.

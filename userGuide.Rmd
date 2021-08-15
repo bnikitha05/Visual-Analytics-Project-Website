@@ -130,5 +130,80 @@ This tab focuses not on the whole company but rather on a single employee. It pr
 
 ### 3	On the Day of Incident
 
+This sub section of the application is to investigate the events that unfolded in Abila on 23 January 2014, by doing analysis on the message stream of microblog records and call centre reports for this period of 1700H to 2135H.
 
+### 3.1	Message Stream Exploration
 
+The first part is to look at some basic exploration of the message stream and its content, and in particular to distinguish and extract meaningful event information from typical chatter.
+
+#### 3.1.1 Author Spam
+
+This tab looks at the number of messages that different microblog authors produce. By focusing on the top few, we can see if some authors are producing spam that will interfere with the downstream sense-making of the data.
+
+![](img/mc3/Slide1.JPG)
+
+The graph on top shows the authors and their messages over time, grouped by each hour.
+
+[1] Based on the graph, select any author to explore the content of their messages.
+
+#### 3.1.2 Word Cloud
+
+We make use of simple wordclouds to get an overview of the kind of topics and keywords that are most often discussed in the message stream.
+
+![](img/mc3/Slide2.JPG)
+
+[1] Select the minimum wordcount / term frequency for a word to be included in the the wordcloud. If we want less words in the wordcloud, choose a higher value; if we want more words, choose a lower value.
+
+[2] Select the size of the wordcloud.
+
+[3] Select the wordcloud type. The default one uses a single wordcloud for the whole period. We can also choose the multiple wordcloud, which provides one wordcloud for each hour.
+
+![](img/mc3/Slide3.JPG)
+
+#### 3.1.3 TF-IDF Keywords
+
+The third part utilizes the TF-IDF heuristic, which measures how important a word is to a document in a collection/corpus of documents, by including the inverse document frequency (IDF) to balance the term frequency (TF) used in the wordcloud. Therefore, it allows us to sieve out the most important events happening in each period from the chatter spread throughout the dataset.
+
+![](img/mc3/Slide4.JPG)
+
+[1] Select the plot type. The default one calculates tf-idf for bigrams (word pairs), which provides more context and is thus easier to interpret for the user. The user can also choose to see the unigram (single words) tf-idf plot, as show below.
+
+![](img/mc3/Slide5.JPG)
+
+[2] Change the top N bigrams/unigrams by tf-idf value to be shown.
+
+[3] Choose whether to show the data table of the message stream. This is useful if we need more context surrounding specific keywords, which can be done by searching for these keywords in the message stream. An example is shown below with the “alexandrias ithakis” keywords (which is a cross junction of two roads, Alexandrias and Ithakis).
+
+![](img/mc3/Slide6.JPG)
+
+### 3.2	Risk level timeline
+
+This section looks at how the level of the risk to the public evolves over the course of the incident unfolding, and uses various measures to explore this risk.
+
+#### 3.2.1 By Call Centre Reports 
+
+This tab looks at the call centre reports, which are organized, low in numbers and have a high signal-to-noise ratio (compared to microblog messages).
+
+![](img/mc3/Slide7.JPG)
+
+[1] Select the time intervals to bin the messages. This allows flexibility to group the messages into different desired time intervals, to explore the timeline as desired. An example is shown using 5 min intervals instead of the default 15 min interval.
+
+![](img/mc3/Slide8.JPG)
+
+[2] Choose whether to only include call centre reports that are longer in length. This is because long messages tend to be more important incidents, due to the need to report more incident details. An example is shown below when including all messages, which tends to introduce more minor reports to the timeline.
+
+![](img/mc3/Slide9.JPG)
+
+[3] Choose whether to include the data table, to see the details of the reports.
+
+#### 3.2.2 By Microblog Messages
+
+This tab looks at the microblog messages. While more messy and noisy, they contain significant information like crowd levels and public reactions to add to the risk level evaluation. We use various quantitative estimates to assess risk.
+
+![](img/mc3/Slide10.JPG)
+
+[1]
+
+[2]
+
+[3]
