@@ -108,7 +108,7 @@ Interactive geospatial visualisation is performed using the `tmap` package. The 
 
 ![](img/image07.png){width=70%}
 
-**Map of Key Event Locations with Geolocation**
+**Map of Key Event Locations**
 
 ![](img/image11.png){width=70%}
 
