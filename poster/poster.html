@@ -321,38 +321,43 @@ font-size: 20pt;
 </ol>
 <p><strong>Text Analytics</strong></p>
 <p><em>Comparison Cloud</em></p>
-<p>Comparison clouds visualise the similarity and differences of important words used by different newsgroups. From them, we are able to get a sense of the sentiments and attitude of these newsgroups. Packages involved are <strong>tidytext</strong>, <strong>tm</strong> and <strong>wordcloud</strong>.</p>
-<p><img src="img/image03.png" style="width:80.0%" /></p>
-<p><strong>Textnet and Text Plot</strong></p>
+<p>Comparison clouds visualise the similarity and differences of important words used by different newsgroups. From them, we are able to get a sense of the sentiments and attitude of these newsgroups. Packages involved are <code>tidytext</code>, <code>tm</code> and <code>wordcloud</code>.</p>
+<p><em>Textnet and Text Plot</em></p>
 <p>Textnet is used for clustering of newsgroups. The thickness of the edge connecting any two nodes represents how similar the two nodes are.</p>
-<p>The color of the node corresponds to the text communities, with the same color indicating a strong relationship between its components. In this way, clusters are formed to segment the newsgroups with similar characteristics in terms of the types of words used in the news articles.</p>
-<p>Upon visualizing the components in each cluster, text plot visualizations are conducted to pull out the word co-occurrences between word-pairs, so as to determine the context and content of each clusters.</p>
 <p><img src="img/image02.png" style="width:32.0%" />
 <img src="img/image04.png" style="width:32.0%" />
 <img src="img/image05.png" style="width:32.0%" /></p>
-<p>Packages used are <strong>textnet</strong>, <strong>ggwordcloud</strong>, <strong>tidytext</strong>, <strong>udpipe</strong> and <strong>textplot</strong>.</p>
+<p>The color of the node corresponds to the text communities, with the same color indicating a strong relationship between its components. Clusters are then formed to segment the newsgroups with similar characteristics.</p>
+<p>Upon visualizing the components in each cluster, text plot visualizations are conducted to pull out the word co-occurrences between word-pairs, so as to determine the context and content of each clusters.</p>
+<p>Packages used: <code>textnet</code>, <code>ggwordcloud</code>, <code>udpipe</code>, <code>textplot</code>.</p>
 <!-- *Correlation Graphs*  -->
 <!-- not enough space -->
 <!-- Correlation graphs are plotted to determine the correlation between different newsgroups using the Pearson method. From this, we are able to determine which newsgroups might be highly related in terms of their reports of certain events over the years. -->
 <!-- ![](img/image06.png) -->
 <!-- The R packages used are **widyr** and **ggraph**.  -->
 <p><em>Term Frequency-Inverse Document Frequency (TF-IDF)</em></p>
-<p>The TF-IDF approach (using <strong>tidytext</strong>) aims to measure the importance of a word/word-pair to a document in a collection/corpus of documents. By viewing each hour of tweets as a document and all 5 hours of the dataset as the corpus, it helps us to sieve out the most important events occurring during each period from the chatter spread throughout the dataset.</p>
-<p><img src="img/image07.png" /></p>
-<p><strong>Network Graphs (using tidygraph and ggraph)</strong></p>
-<p>The email distribution flow from one person to another is visualised in terms of a network graph. The thickness of the edge implies the number of email passed between two nodes.</p>
+<p>TF-IDF (using <code>tidytext</code> package) measures the importance of a word/word-pair to a document in a collection of documents. It sieves out the most important events occurring during each period from the chatter.</p>
+<p><strong>Network Graphs</strong></p>
+<p>Using <code>tidygraph</code> and <code>ggraph</code>, the email distribution flow from one person to another is visualised in terms of a network graph. The thickness of the edge implies the number of email passed between two nodes.</p>
 <p><img src="img/image09.png" style="width:48.0%" />
 <img src="img/image10.png" style="width:48.0%" /></p>
 <p>The email relationships of the employees are split into work-related and non-work related, in attempt to identify potential suspicious activities that might be transpiring between different employees.</p>
-<p><strong>Timeline Charts</strong>
-Separate timeline charts are plotted using the <strong>ggplot</strong> package to look into the frequency of the microblog and call center reports over time. Through that, we aim to discover the risk levels indicated by the charts.</p>
-<p>A data table using the <strong>DT</strong> package is also linked to the charts to show the exact messages that are received.</p>
-<p><strong>Geospatial Mapping</strong>
-Interactive geospatial mapping visualisation is performed using the <strong>tmap</strong> package so as to track the locations where those microblogs tweets and call center reports originate from. The interactive view mode allow layers to be removed or added, as well as show the exact messages by clicking on the points.</p>
+<p><strong>Timeline Charts</strong></p>
+<p>Separate timeline charts are plotted using the <code>ggplot2</code> and <code>DT</code> package to look into the the microblog and call center reports. Through that, we aim to discover the risk levels over the incident time.</p>
+<p><strong>Geospatial Mapping</strong></p>
+<p>Interactive geospatial visualisation is performed using the <code>tmap</code> package. The interactive view mode allow layers to be removed or added, as well as show the exact messages by clicking on the points.</p>
 </div>
-<div id="results" class="section level1">
-<h1>Results</h1>
-<p>Placeholder</p>
+<div id="results-key-findings" class="section level1">
+<h1>Results / Key Findings</h1>
+<p><strong>Content of Newsgroups (using Comparison Cloud)</strong></p>
+<p><img src="img/image03.png" style="width:60.0%" /></p>
+<p><strong>Context of Clusters</strong></p>
+<p><img src="img/image12.png" style="width:48.0%" />
+<img src="img/image13.png" style="width:48.0%" /></p>
+<p><strong>Key Topics from Microblog Analysis (using bigram TF-IDF)</strong></p>
+<p><img src="img/image07.png" style="width:70.0%" /></p>
+<p><strong>Map of Key Event Locations</strong></p>
+<p><img src="img/image11.png" style="width:70.0%" /></p>
 </div>
 <div id="future-work" class="section level1">
 <h1>Future Work</h1>
