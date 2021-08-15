@@ -168,10 +168,6 @@ The R package used is **tmap** to generate thematic maps with high flexibility a
 # Application Insights
 From our Shiny application, different insights can be drawn to learn more about the Kronos Incident. 
 
-## Correlated News Groups
-The correlation graph shows that 
-## Frequently Occurring Phrases
-
 ## Content of Newsgroups
 Looking into Fig. X, we can observe that "News Online Today" is the newsgroup that mostly talked about the situation in Kronos, with a majority of articles speaking about POK but little was spoken about the contamination and health of the Kronos villagers. Hence, this implies that "News Online Today" seems to be targeting the POK group the most.
 
@@ -209,9 +205,6 @@ Based on the segregration between work related and non-work related emails, we a
 * Executive Department has more non-work related emails than work-related emails 
 * One IT employee seems to be the most common receiver and sender of non-work related emails 
 * Heavy transmission of unofficial emails among Administration Department
-
-## Sensitive Emails Identified 
-
 
 ## Microblog Tweets Analysis
 
