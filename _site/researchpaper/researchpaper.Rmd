@@ -18,9 +18,9 @@ output: rticles::acm_article
 ---
 
 # Introduction 
-The fictitious Kronos Incident saw the disappearance of several employees from the Tethys-based GASTech in January 2014 after a successful initial public offering (IPO) of the company. Given that GASTech has not been very environmentally friendly in its operations of a natural gas production site in the island country of Kronos, it was suspected that a Kronos-based organization (POK) is involved in the disappearance of the employees, as a form of retaliation. In order to have a better idea on what exactly transpired to lead to the vanishing of the GASTech employees, we will be applying visual analytic techniques on the datasets provided.
+The fictitious Kronos Incident saw the disappearance of several employees from the Tethys-based GASTech in January 2014 after a successful initial public offering (IPO) of the company, as well as multiple events that happened on a single day, 23 January 2014. Given that GASTech has not been very environmentally friendly in its operations of a natural gas production site in the island country of Kronos, it was suspected that a Kronos-based organization (POK) is involved in the disappearance of the employees, as a form of retaliation. In order to have a better idea on what exactly transpired to lead to the vanishing of the GASTech employees, we will be applying visual analytic techniques on the datasets provided.
 
-This study will be handling visualizations on newspaper articles, employee records and emails, call center reports and microblog tweets in an interactive web application. Users can explore the application and understand more about GASTech’s reputation and how events unfolded that lead to the kidnappings of employees.
+This study will be handling visualizations on newspaper articles, employee records and emails, call center reports and microblog tweets in an interactive web application. Users can explore the application and understand more about GASTech’s reputation and how events unfolded on the day of the incident.
 
 # Motivation and Objectives
 The motivation behind this study is to explore and learn how visual analytics can be used for investigating crimes. With so much data being available for the kidnappings incident, it takes much time to manually look through and identify clues and patterns. Instead, we propose the usage an application where a user can interact with and better understand the relationships among people and organizations of importance, as well as see how multiple events of high consequences unfolded in the city of Abila, Kronos on the incident day.
@@ -143,17 +143,15 @@ The email relationships of the employees are split into work-related and non-wor
 
 The main R packages needed to create network graphs are **tidygraph** and **ggraph**. Under **tidygraph**, the 'tbl_graph' function is used to convert data to an object to display network belongs to this package. **ggraph** is used to plot the network object. 
 
-### Bar Charts
-Separate bar charts are plotted to look into the frequency of the microblog and call center reports coming in over a fixed time period of between 1700H to 2200H. Through that, we aim to discover the risk levels indicated by these data to draw out a basic timeline of major events that occurred during that evening. 
+### Timeline Charts
+Separate timeline charts are plotted using the **ggplot2** package to look into the frequency of the microblog and call center reports coming in over a fixed time period of between 1700H to 2200H. Through that, we aim to discover the risk levels indicated by these data using quantitative estimates, to draw out a basic timeline of major events that occurred during that evening. 
 
-A data table is also linked to the bar chart to show the exact messages that are received tagged to both time and location.
-
-**plotly** package is used in this visualization to be able to create interactive web-based graphs. 
+Data tables using the **dt** package are also linked to these chart to show the exact messages that are received tagged to both time and location.
 
 ### Geospatial Mapping
 Interactive geospatial mapping visualization is performed so as to track the locations where those microblogs tweets and call center reports originate from. The interactive view mode allow layers to be removed or added, as well as show the exact messages by clicking on the points.
 
-The R package used is **tmap** to generate thematic maps with high flexibility and interactivity,
+The R package used is **tmap** to generate thematic maps with high flexibility and interactivity.
 
 # Application Insights
 From our Shiny application, different insights can be drawn to learn more about the Kronos Incident. 
@@ -238,18 +236,18 @@ The basic timeline of major event identified over the course of the evening with
 
 4. Nearing the end after the black van and fire incident seemed to have died down, from 2045H there were several reports of crime scene investigations, with continued suspicious reports. Risk level would be at 3 (moderate).
 
-## Map of Key Messages with Geolocation
+## Map of Key Event Locations
 
 ![](img/image11.png)
 *Fig. 12 Geomap showing Origin of Key Messages*
 
-From Fig. 12, we are able observe that there are three locations with high density of message origination, suggesting that major events are occurring around those location clusters, 
+From Fig. 12, we are able observe that there are three locations with high density of message origination, suggesting that major events are occurring around those location clusters.
 
 The red cluster appears to be the place with highest risk and potential consequences, due to the high number of negative tweets and several serious call center reports spread over time. Both types of messages mention the standoff and police casualties. 
 
 The blue cluster also has many call center reports, but lesser negative tweets. Closer inspection by clicking on the points show that these tweets are mainly about the fire which appeared to have been under control, and the call center reports are mostly about dispatch requests. 
 
-The brown cluster seems to be about the explosion that occurred late. Closer inspection shows that many of such messages are sent by a spam account footfingers. 
+The brown cluster seems to be about the hit-and-run incident. Closer inspection shows that many of the messages at this location are sent by a spam account footfingers, and are unimportant.
 
 # Conclusion and Future Work
 In conclusion, this study attempts to draw out insights related to the disappearance of the GASTech employees from a collection of artifacts and emails related to the GASTech company. The analysis in our web application is scoped to investigate how events unfolded on the day of incident and prove the reputation of GASTech since its establishment. 
