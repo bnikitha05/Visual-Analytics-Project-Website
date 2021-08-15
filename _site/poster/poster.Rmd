@@ -68,7 +68,7 @@ Packages used: `textnet`, `ggwordcloud`, `udpipe`, `textplot`.
 *Correlation Graphs*
 Correlation graphs are plotted to determine the correlation between different newsgroups using the Pearson method. From this, we are able to determine which newsgroups might be highly related in terms of their reports of certain events over the years.
 
-![](img/image06.png)
+![](img/image06.png){width=90%}
 
 The R packages used are **widyr** and **ggraph**.
 
@@ -97,7 +97,7 @@ Interactive geospatial visualisation is performed using the `tmap` package. The 
 
 **Content of Newsgroups (using Comparison Cloud)**
 
-![](img/image03.png){width=60%}
+![](img/image03.png){width=90%}
 
 **Context of Clusters**
 
