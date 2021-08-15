@@ -278,7 +278,7 @@ references:
   author: IEEE
   type: website
   publisher: IEEE
-  URL: 'https://vast-challenge.github.io/2021/'
+  URL: "https://vast-challenge.github.io/2021/"
   issued:
     year: 2021
 - id: pekingvast2014
@@ -294,7 +294,7 @@ references:
     given: Xiaoru
   type: website
   publisher: Peking University
-  URL: 'https://www.cs.umd.edu/hcil/varepository/VAST%20Challenge%202014/challenges/MC1%20-%20Disappearance%20at%20GASTech/entries/Peking%20University/'
+  URL: "https://www.cs.umd.edu/hcil/varepository/VAST%20Challenge%202014/challenges/MC1%20-%20Disappearance%20at%20GASTech/entries/Peking%20University/"
   issued:
     year: 2014
 - id: tianvast2014
@@ -305,8 +305,8 @@ references:
   - family: Jiang
     given: Xinyi
   type: website
-  publisher: Tianjing University
-  URL: 'https://www.cs.umd.edu/hcil/varepository/VAST%20Challenge%202014/challenges/MC3%20-%20Real-Time,%20Streaming%20Social%20Media/entries/Tianjin%20University/'
+  publisher: "Tianjing University"
+  URL: "https://www.cs.umd.edu/hcil/varepository/VAST%20Challenge%202014/challenges/MC3%20-%20Real-Time,%20Streaming%20Social%20Media/entries/Tianjin%20University/"
   issued:
     year: 2014
 - id: halveykeane
@@ -317,7 +317,7 @@ references:
   - family: "Keane"
     given: "Mark T."
   container-title: "WWW '07: Proceedings of the 16th international conference on World Wide Web"
-  URL: 'https://doi.org/10.1145/1242572.1242826'
+  URL: "https://doi.org/10.1145/1242572.1242826"
   DOI: 10.1145/1242572.1242826
   publisher: Association for Computing Machinery
   page: 1313-1314
@@ -330,14 +330,14 @@ references:
   author:
   - family: "Trigg"
     given: "Randall H."
-  - family: Weiser
-    given: Mark
+  - family: "Weiser"
+    given: "Mark"
   container-title: "ACM Transactions on Information Systems"
   Volume: 11
-  URL: 'https://doi.org/10.1145/5401.5402'
-  DOI: 10.1145/5401.5402
+  URL: "https://doi.org/10.1145/5401.5402"
+  DOI: "10.1145/5401.5402"
   issue: 1
-  publisher: Association for Computing Machinery
+  publisher: "Association for Computing Machinery"
   page: 1-23
   type: article-journal
   issued:
@@ -349,10 +349,10 @@ references:
   - family: Glen
     given: Stephanie
   type: website
-  URL: 'https://www.statisticshowto.com/probability-and-statistics/correlation-coefficient-formula/'
+  URL: "https://www.statisticshowto.com/probability-and-statistics/correlation-coefficient-formula/"
   publisher: Statistics How To
 - id: silge
-  title: Analysing word and document frequency: tf-idf
+  title: "Analysing word and document frequency: tf-idf"
   author:
   - family: Silge
     given: Julia
