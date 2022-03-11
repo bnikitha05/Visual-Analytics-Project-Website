@@ -11,6 +11,6 @@ knitr::opts_chunk$set(echo = TRUE, warning=FALSE,message=FALSE)
 ```
 
 
-Our R Shiny Application can be found here: [Viz-Investigation of Kronos Incident](https://fuytio.shinyapps.io/VAST2021-T15-Shiny/)
+Our R Shiny Application can be found here: [Viz-Investigation of Kronos Incident](https://bnikitha05.shinyapps.io/VAST2021-T15-ShinyGit/)
 
 The source code and data are available at [GitHub.com](https://github.com/fuytio/VAST2021-T15-ShinyGit)
